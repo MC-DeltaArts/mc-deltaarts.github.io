@@ -104,3 +104,26 @@ document.addEventListener("animationend", (event) => {
 
   if (!stillRunning) element.classList.add("reveal-done");
 });
+
+const galleryList = document.querySelector(".gallery");
+
+function rearm(element) {
+  element.classList.remove("is-revealed", "reveal-done");
+  element.style.removeProperty("--reveal-delay");
+  observer.observe(element);
+}
+
+if (galleryList) {
+  new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      const item = mutation.target;
+      if (item.hidden) continue;
+      if (!item.matches("[data-reveal]")) continue;
+      rearm(item);
+    }
+  }).observe(galleryList, {
+    attributes: true,
+    attributeFilter: ["hidden"],
+    subtree: true,
+  });
+}

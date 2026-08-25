@@ -16,6 +16,14 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  color: var(--white);
+  font-size: 1.2em;
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--green);
+  text-decoration-color: var(--green);
+}
+
 body {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -109,16 +117,20 @@ p b {
   margin: 0 1rem;
 }
 
-.nav-link:hover {
-  color: var(--green);
+@media (hover: hover) {
+  .nav-link:hover {
+    color: var(--green);
+  }
 }
 
 .resume-link {
   color: var(--green);
 }
 
-.resume-link:hover {
-  filter: brightness(0.75);
+@media (hover: hover) {
+  .resume-link:hover {
+    filter: brightness(0.75);
+  }
 }
 
 .home-link {
@@ -130,8 +142,10 @@ p b {
   line-height: 1.1;
 }
 
-.home-link:hover {
-  filter: brightness(0.75);
+@media (hover: hover) {
+  .home-link:hover {
+    filter: brightness(0.75);
+  }
 }
 
 .home-title,
@@ -214,7 +228,7 @@ p b {
   padding: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 700px) and (hover: hover) {
   .nav-toggle {
     display: block;
   }
@@ -335,7 +349,13 @@ section {
     border-color 0.2s ease-out;
 }
 
-.project-card:hover,
+@media (hover: hover) {
+  .project-card:hover {
+    transform: scale(1.03);
+    border-color: var(--green);
+  }
+}
+
 .project-card:focus-within {
   transform: scale(1.03);
   border-color: var(--green);
@@ -408,7 +428,12 @@ section {
   transition: color 0.2s ease-out;
 }
 
-.project-card:hover .project-title,
+@media (hover: hover) {
+  .project-card:hover .project-title {
+    color: var(--green);
+  }
+}
+
 .project-card:focus-within .project-title {
   color: var(--green);
 }
@@ -498,7 +523,12 @@ section {
   transition: transform 0.2s ease-out;
 }
 
-.gallery-item:hover,
+@media (hover: hover) {
+  .gallery-item:hover {
+    transform: scale(1.02);
+  }
+}
+
 .gallery-item:focus-within {
   transform: scale(1.02);
 }
@@ -581,8 +611,10 @@ section {
   transform: rotate(135deg);
 }
 
-.filter-chip:hover span {
-  border-color: #666;
+@media (hover: hover) {
+  .filter-chip:hover span {
+    border-color: #666;
+  }
 }
 
 .filter-chip input:checked + span {
@@ -635,7 +667,13 @@ section {
     color 0.2s ease-out;
 }
 
-.load-more:hover,
+@media (hover: hover) {
+  .load-more:hover {
+    border-color: var(--green);
+    color: var(--green);
+  }
+}
+
 .load-more:focus-visible {
   border-color: var(--green);
   color: var(--green);
@@ -708,7 +746,12 @@ section {
   transition: border-color 0.2s ease-out;
 }
 
-.lightbox button:hover,
+@media (hover: hover) {
+  .lightbox button:hover {
+    border-color: var(--green);
+  }
+}
+
 .lightbox button:focus-visible {
   border-color: var(--green);
 }
@@ -778,7 +821,13 @@ section {
   transition: all 0.3s ease-out;
 }
 
-.about-me-pic:hover {
+@media (hover: hover) {
+  .about-me-pic:hover {
+    transform: scale(1.05) rotate(3deg);
+  }
+}
+
+.about-me-pic:active {
   transform: scale(1.05) rotate(3deg);
 }
 
