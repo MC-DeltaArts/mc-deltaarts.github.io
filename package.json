@@ -1,0 +1,25 @@
+{
+  "name": "mc-deltaarts.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gallery": "node scripts/resize.mjs && node scripts/build-gallery.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MC-DeltaArts/mc-deltaarts.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MC-DeltaArts/mc-deltaarts.github.io/issues"
+  },
+  "homepage": "https://github.com/MC-DeltaArts/mc-deltaarts.github.io#readme",
+  "dependencies": {
+    "sharp": "^0.35.3"
+  }
+}
