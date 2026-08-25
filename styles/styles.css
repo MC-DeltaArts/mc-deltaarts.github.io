@@ -228,7 +228,7 @@ p b {
   padding: 0;
 }
 
-@media (max-width: 700px) and (hover: hover) {
+@media (max-width: 700px) {
   .nav-toggle {
     display: block;
   }
@@ -263,8 +263,10 @@ p b {
     text-align: left;
   }
 
-  .nav-link:hover {
-    background: rgba(136, 255, 136, 0.08);
+  @media (hover: hover) {
+    .nav-link:hover {
+      background: rgba(136, 255, 136, 0.08);
+    }
   }
 }
 
