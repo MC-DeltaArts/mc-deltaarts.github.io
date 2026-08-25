@@ -1,11 +1,35 @@
-const STAGGER_STEP = 75;
+const STAGGER_STEP = 90;
 const STAGGER_CAP = 8;
 
-const targets = [...document.querySelectorAll("[data-reveal]")];
+const cascades = [...document.querySelectorAll("[data-reveal-cascade]")];
+const singles = [...document.querySelectorAll("[data-reveal]")].filter(
+  (element) => !element.parentElement?.closest("[data-reveal-cascade]"),
+);
+
+function stepFor(element) {
+  return Number(element.dataset.revealStagger) || STAGGER_STEP;
+}
 
 function reveal(element, delay) {
-  element.style.setProperty("--reveal-delay", `${delay}ms`);
+  const manual = element.dataset.revealDelay;
+  element.style.setProperty("--reveal-delay", manual ?? `${delay}ms`);
   element.classList.add("is-revealed");
+}
+
+function revealCascade(container) {
+  const step = stepFor(container);
+  const children = [...container.querySelectorAll("[data-reveal]")];
+
+  children.forEach((child, index) => {
+    reveal(child, Math.min(index, STAGGER_CAP) * step);
+  });
+
+  container.classList.add("is-revealed");
+}
+
+function revealTarget(element, delay) {
+  if (element.dataset.revealCascade !== undefined) revealCascade(element);
+  else reveal(element, delay);
 }
 
 function inDocumentOrder(a, b) {
@@ -25,13 +49,15 @@ function onIntersect(entries, observer) {
     const element = entry.target;
     const group = element.parentElement?.closest("[data-reveal-stagger]");
     let index = 0;
+    let step = STAGGER_STEP;
 
     if (group) {
       index = seenPerGroup.get(group) ?? 0;
       seenPerGroup.set(group, index + 1);
+      step = stepFor(group);
     }
 
-    reveal(element, Math.min(index, STAGGER_CAP) * STAGGER_STEP);
+    revealTarget(element, Math.min(index, STAGGER_CAP) * step);
     observer.unobserve(element);
   }
 }
@@ -41,7 +67,7 @@ const observer = new IntersectionObserver(onIntersect, {
   threshold: 0,
 });
 
-for (const element of targets) {
+for (const element of [...cascades, ...singles]) {
   observer.observe(element);
 }
 
@@ -53,11 +79,11 @@ window.addEventListener(
       document.documentElement.scrollHeight - 4;
     if (!atBottom) return;
 
-    for (const element of targets) {
+    for (const element of [...cascades, ...singles]) {
       if (element.classList.contains("is-revealed")) continue;
       if (element.offsetParent === null) continue;
 
-      reveal(element, 0);
+      revealTarget(element, 0);
       observer.unobserve(element);
     }
   },
@@ -66,5 +92,15 @@ window.addEventListener(
 
 document.addEventListener("animationend", (event) => {
   if (!event.animationName.startsWith("reveal-")) return;
-  event.target.classList.add("reveal-done");
+
+  const element = event.target;
+  const stillRunning = element
+    .getAnimations()
+    .some(
+      (animation) =>
+        animation.animationName?.startsWith("reveal-") &&
+        animation.playState === "running",
+    );
+
+  if (!stillRunning) element.classList.add("reveal-done");
 });

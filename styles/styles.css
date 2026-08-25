@@ -13,6 +13,7 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,8 +44,30 @@ body {
   margin-top: 100px;
 }
 
-h2 {
+.section-intro {
+  margin: 0 auto 3rem;
+}
+
+.section-intro h2 {
   font-size: clamp(1.5rem, 3vw, 4rem);
+}
+
+.section-intro p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: #888;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section hr {
+  border: solid 2px var(--green);
+  margin: 3rem 0 0rem;
+}
+
+p strong,
+p b {
+  color: var(--green);
 }
 
 /* HEADER */
@@ -237,6 +260,7 @@ h2 {
   background-position: center;
   text-align: left;
   min-height: 100vh;
+  border-bottom: solid 4px var(--green);
 }
 
 .intro-text {
@@ -738,16 +762,49 @@ section {
   margin: 0 auto;
 }
 
-.about-me-pic {
-  max-width: 300px;
-  border: 4px solid var(--green);
-  border-radius: 100px;
+.about-me-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1600px;
 }
 
-@media (max-width: 700px) {
+.about-me-pic {
+  max-width: 30%;
+  border: 4px solid var(--green);
+  border-radius: 100px;
+  transition: all 0.3s ease-out;
+}
+
+.about-me-pic:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+.about-me-description {
+  max-width: 60%;
+}
+
+.about-me-description p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: #888;
+  margin: 1.5rem auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 1000px) {
+  .about-me-container {
+    display: block;
+  }
+
   .about-me-pic {
     max-width: 150px;
     border: 4px solid var(--green);
     border-radius: 100px;
+  }
+
+  .about-me-description {
+    max-width: 100%;
   }
 }

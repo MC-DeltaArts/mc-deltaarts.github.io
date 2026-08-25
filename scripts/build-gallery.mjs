@@ -26,7 +26,7 @@ for (const art of artworks) {
   const ratio = (meta.width / meta.height).toFixed(3);
 
   items.push(`
-      <li class="gallery-item" data-tags="${art.tags.join("|")}" style="--ratio: ${ratio}">
+      <li class="gallery-item" data-reveal="fade" data-tags="${art.tags.join("|")}" style="--ratio: ${ratio}">
           <a href="${THUMBS}/1600-${art.file}"
            class="gallery-link"
            data-title="${escapeAttr(art.title)}"
@@ -49,7 +49,7 @@ for (const art of artworks) {
       </li>`);
 }
 
-const gallery = `<ul role="list" class="gallery">${items.join("")}\n    </ul>`;
+const gallery = `<ul role="list" class="gallery" data-reveal-stagger>${items.join("")}\n    </ul>`;
 
 const page = await readFile(PAGE, "utf8");
 const updated = page.replace(

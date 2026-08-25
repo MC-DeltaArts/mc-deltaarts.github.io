@@ -1,75 +1,75 @@
+:root {
+  --reveal-distance: 2.5rem;
+  --reveal-duration: 700ms;
+  --reveal-ease: ease-out;
+  --reveal-fade-duration: 500ms;
+  --reveal-fade-ease: ease-out;
+  --reveal-scale: 0.94;
+  --reveal-delay: 0ms;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .js-reveal [data-reveal] {
     opacity: 0;
   }
 
   .js-reveal [data-reveal].is-revealed {
-    animation: reveal-up var(--reveal-duration, 700ms)
-      cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms) both;
+    animation:
+      reveal-slide-up var(--reveal-duration) var(--reveal-ease)
+        var(--reveal-delay) both,
+      reveal-fade var(--reveal-fade-duration) var(--reveal-fade-ease)
+        var(--reveal-delay) both;
   }
 
   .js-reveal [data-reveal="left"].is-revealed {
-    animation-name: reveal-left;
-  }
-
-  .js-reveal [data-reveal="right"].is-revealed {
-    animation-name: reveal-right;
+    animation-name: reveal-slide-left, reveal-fade;
   }
 
   .js-reveal [data-reveal="zoom"].is-revealed {
-    animation-name: reveal-zoom;
+    animation-name: reveal-zoom, reveal-fade;
   }
 
   .js-reveal [data-reveal="fade"].is-revealed {
-    animation-name: reveal-fade;
+    animation-name: none, reveal-fade;
   }
 
   .js-reveal [data-reveal].reveal-done {
     animation: none;
     opacity: 1;
   }
+
+  .js-reveal [data-reveal="blur"].is-revealed {
+    animation-name: reveal-blur, reveal-fade;
+  }
+
+  .js-reveal [data-reveal="grow"].is-revealed {
+    animation-name: reveal-grow, reveal-opaque;
+  }
 }
 
-@keyframes reveal-up {
+@keyframes reveal-slide-up {
   from {
-    opacity: 0;
-    transform: translate3d(0, 2.5rem, 0);
+    transform: translate3d(0, var(--reveal-distance), 0);
   }
   to {
-    opacity: 1;
     transform: none;
   }
 }
 
-@keyframes reveal-left {
+@keyframes reveal-slide-left {
   from {
-    opacity: 0;
-    transform: translate3d(-3rem, 0, 0);
+    transform: translate3d(calc(-1 * var(--reveal-distance)), 0, 0);
   }
   to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes reveal-right {
-  from {
-    opacity: 0;
-    transform: translate3d(3rem, 0, 0);
-  }
-  to {
-    opacity: 1;
     transform: none;
   }
 }
 
 @keyframes reveal-zoom {
   from {
-    opacity: 0;
-    transform: scale(0.94);
+    transform: scale(var(--reveal-scale));
   }
   to {
-    opacity: 1;
     transform: none;
   }
 }
@@ -77,6 +77,33 @@
 @keyframes reveal-fade {
   from {
     opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal-blur {
+  from {
+    filter: blur(10px);
+  }
+  to {
+    filter: none;
+  }
+}
+
+@keyframes reveal-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes reveal-opaque {
+  from {
+    opacity: 1;
   }
   to {
     opacity: 1;

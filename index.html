@@ -24,10 +24,15 @@
 
     <link href="normalize.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/reveal.css" rel="stylesheet" />
 
     <script src="scripts/gallery.js" defer></script>
     <script src="scripts/lightbox.js" defer></script>
     <script src="scripts/navbar.js" defer></script>
+    <script>
+      document.documentElement.classList.add("js-reveal");
+    </script>
+    <script src="scripts/reveal.js" defer></script>
   </head>
 
   <body id="home">
@@ -82,11 +87,11 @@
     -->
       <div class="intro-banner">
         <div class="intro-text">
-          <h1>
+          <h1 data-reveal="left">
             Hi, I'm <br />
             Marco Caramazza!
           </h1>
-          <p>
+          <p data-reveal="left">
             Game Developer and Systems Designer with a passion for creating
             immersive experiences. Welcome to my portfolio where you can explore
             my projects, learn more about me, and get in touch!
@@ -95,12 +100,19 @@
       </div>
 
       <section id="projects">
-        <h2>Projects</h2>
-        <p>Check out some of my recent projects!</p>
+        <div class="section-intro" data-reveal="blur">
+          <h2>Projects</h2>
+          <p>
+            A showcase of all my
+            <strong>games and other related projects</strong> I've worked on! If
+            any of them interest you check out more details about them by
+            clicking on the project's thumbnail.
+          </p>
+        </div>
 
-        <ul role="list" class="project-list">
+        <ul role="list" class="project-list" data-reveal-stagger="400">
           <!--Hivemind-->
-          <li class="project-item">
+          <li class="project-item" data-reveal>
             <article class="project-card">
               <a href="projects/space-shooter/index.html">
                 <div class="project-thumbnail">
@@ -140,7 +152,7 @@
           </li>
 
           <!--Seats For All-->
-          <li class="project-item">
+          <li class="project-item" data-reveal>
             <article class="project-card">
               <a href="projects/space-shooter/index.html">
                 <div class="project-thumbnail">
@@ -178,7 +190,7 @@
           </li>
 
           <!--Enchanted Forest-->
-          <li class="project-item">
+          <li class="project-item" data-reveal>
             <article class="project-card hivemind-card">
               <a href="projects/space-shooter/index.html">
                 <div class="project-thumbnail">
@@ -218,7 +230,7 @@
           </li>
 
           <!--CTRL-V-->
-          <li class="project-item">
+          <li class="project-item" data-reveal>
             <article class="project-card hivemind-card">
               <a href="projects/space-shooter/index.html">
                 <div class="project-thumbnail">
@@ -257,9 +269,13 @@
         </ul>
       </section>
 
-      <section id="artworks">
-        <h2>Artworks</h2>
-        <fieldset class="filter-bar">
+      <section id="artworks" data-reveal-stagger>
+        <hr data-reveal="grow" />
+        <div class="section-intro" data-reveal="blur">
+          <h2>Artworks</h2>
+          <p>aaa</p>
+        </div>
+        <fieldset class="filter-bar" data-reveal>
           <legend class="visually-hidden">Filter artworks by category</legend>
 
           <label class="filter-chip">
@@ -288,450 +304,639 @@
           </label>
         </fieldset>
         <!--GALLERY:START-->
-    <ul role="list" class="gallery">
-      <li class="gallery-item" data-tags="Concept Art|Characters" style="--ratio: 1.455">
-          <a href="assets/imgs/artworks/thumbs/1600-human-flip.webp"
-           class="gallery-link"
-           data-title="Human Flip Teller"
-           data-title-spoken="Human Flip Teller"
-           data-date="2026-07-05"
-           data-description="The bust of a thin, pallid man with silky yellow hair slicked back and golden eyes with heavy bags underneath. He wears round, red-tinted glasses with golden frames, rings on his blue lips and ears, and an elegant green tie over a light blue shirt and a burgundy vest.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-human-flip.webp"
-            srcset="assets/imgs/artworks/thumbs/400-human-flip.webp 400w,
-                    assets/imgs/artworks/thumbs/800-human-flip.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-human-flip.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="3069"
-            height="2109"
-            alt="A bust portrait of Flip in human form, with slicked yellow hair and tinted glasses."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters|Miscellaneous" style="--ratio: 1.000">
-          <a href="assets/imgs/artworks/thumbs/1600-refsheet-bob.webp"
-           class="gallery-link"
-           data-title="The Fighter"
-           data-title-spoken="The Fighter"
-           data-date="2026-06-02"
-           data-description="A muscular human man with olive skin, blond hair, and a goatee. His left eye is missing and covered by an eyepatch, leaving a single green eye, and his right arm is entirely mechanical. He wears simple vertically striped clothes, wields a broken claymore in one hand, and carries a small battle hammer at his side. Lightning surges through his body when he is angered.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-refsheet-bob.webp"
-            srcset="assets/imgs/artworks/thumbs/400-refsheet-bob.webp 400w,
-                    assets/imgs/artworks/thumbs/800-refsheet-bob.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-refsheet-bob.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="7100"
-            height="7100"
-            alt="Reference sheet for a one-eyed human fighter with a mechanical right arm."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters" style="--ratio: 1.063">
-          <a href="assets/imgs/artworks/thumbs/1600-refsheet-demidi.webp"
-           class="gallery-link"
-           data-title="Demidi"
-           data-title-spoken="Demidi"
-           data-date="2026-06-01"
-           data-description="A plus-sized satyr woman with black skin, bright green eyes, and golden locks cut at neck height that frame her face. She has a gap-toothed smile and wears a wooden mask over the right side of her face. The arm on that side is missing and the stump is held in a brace, while the leg is replaced at the knee by a wooden prosthetic. She is dressed in vivid greens, her nails are painted cyan, her skin carries white markings in a Greco-Roman style, and her body is adorned with jewelry: a nose ring, earrings, a glass heart necklace, and a ring on her finger.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-refsheet-demidi.webp"
-            srcset="assets/imgs/artworks/thumbs/400-refsheet-demidi.webp 400w,
-                    assets/imgs/artworks/thumbs/800-refsheet-demidi.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-refsheet-demidi.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="5000"
-            height="4705"
-            alt="Reference sheet for Demidi, a plus-sized satyr woman with a wooden mask and prosthetic leg."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Illustrations" style="--ratio: 1.986">
-          <a href="assets/imgs/artworks/thumbs/1600-illustration-forget-me.webp"
-           class="gallery-link"
-           data-title="Forget Me"
-           data-title-spoken="Forget Me"
-           data-date="2026-05-24"
-           data-description="A blue dragon humanoid lies on a gray wooden floor surrounded by messy papers. Her body and tail are curled around a central orb that gives off a diffused yellow light, which shines on the tears in her eyes.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-illustration-forget-me.webp"
-            srcset="assets/imgs/artworks/thumbs/400-illustration-forget-me.webp 400w,
-                    assets/imgs/artworks/thumbs/800-illustration-forget-me.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-illustration-forget-me.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="3167"
-            height="1595"
-            alt="A blue dragon humanoid curled around a glowing orb on a paper-strewn floor, crying."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters|Concept Art" style="--ratio: 0.759">
-          <a href="assets/imgs/artworks/thumbs/1600-refsheet-avalis.webp"
-           class="gallery-link"
-           data-title="The Inventor"
-           data-title-spoken="The Inventor"
-           data-date="2026-05-21"
-           data-description="A fit blue dragon humanoid woman with hanging thread-like frills and accents of yellow in her eyes, tail, and talons. Sketchy studies of her trapezoidal head shape accompany two illustrations of her in different outfits: first, simple everyday attire with deep navy shorts and a burgundy top; second, adventuring gear with a large yellow jumper and pieces of ceramic armor on top.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-refsheet-avalis.webp"
-            srcset="assets/imgs/artworks/thumbs/400-refsheet-avalis.webp 400w,
-                    assets/imgs/artworks/thumbs/800-refsheet-avalis.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-refsheet-avalis.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="4222"
-            height="5560"
-            alt="Reference sheet for a blue dragon humanoid woman shown in two outfits."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters|Illustrations|Miscellaneous" style="--ratio: 1.000">
-          <a href="assets/imgs/artworks/thumbs/1600-illustration-hate.webp"
-           class="gallery-link"
-           data-title="Product of Hate"
-           data-title-spoken="Product of Hate"
-           data-date="2026-05-01"
-           data-description="A lumpy, wrinkly, overly detailed creature with a worm-like structure. All of its segments look inflated, as if the organs underneath were ready to burst through the gray, ashen skin, and its veins burn through the thin layer like coursing lava. Its appendages have been reduced to rounded stumps, and its eyes are empty white cavities that emanate smoke. The ground around the creature's inhuman mass is covered in dark red stains.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-illustration-hate.webp"
-            srcset="assets/imgs/artworks/thumbs/400-illustration-hate.webp 400w,
-                    assets/imgs/artworks/thumbs/800-illustration-hate.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-illustration-hate.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="3000"
-            height="3000"
-            alt="A bloated, worm-like creature with stump limbs and smoking hollow eyes."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Concept Art|Illustrations" style="--ratio: 1.842">
-          <a href="assets/imgs/artworks/thumbs/1600-concept-art-hivemind-rain.webp"
-           class="gallery-link"
-           data-title="Hivemind Concept - Flooded"
-           data-title-spoken="Hivemind Concept - Flooded"
-           data-date="2026-04-15"
-           data-description="Two bees fly out from the naked branches of a tree to look at the approaching gray skies of a coming storm, while small droplets of rain have already begun falling on them.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-concept-art-hivemind-rain.webp"
-            srcset="assets/imgs/artworks/thumbs/400-concept-art-hivemind-rain.webp 400w,
-                    assets/imgs/artworks/thumbs/800-concept-art-hivemind-rain.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-concept-art-hivemind-rain.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="2943"
-            height="1598"
-            alt="Concept art of two bees watching a storm approach from a bare tree branch."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Concept Art|Illustrations" style="--ratio: 1.793">
-          <a href="assets/imgs/artworks/thumbs/1600-concept-art-hivemind-event.webp"
-           class="gallery-link"
-           data-title="Hivemind Concept - Surrounded"
-           data-title-spoken="Hivemind Concept - Surrounded"
-           data-date="2026-04-13"
-           data-description="A bee at the center is surrounded by the dark silhouettes of a wasp, an ant, and a spider. The eyes of all three adversaries are a striking, enraged red, while the bee is drawn over a calming light blue but looks panicked.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-concept-art-hivemind-event.webp"
-            srcset="assets/imgs/artworks/thumbs/400-concept-art-hivemind-event.webp 400w,
-                    assets/imgs/artworks/thumbs/800-concept-art-hivemind-event.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-concept-art-hivemind-event.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="2632"
-            height="1468"
-            alt="Concept art of a panicked bee surrounded by the silhouettes of three predators."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Concept Art|Characters" style="--ratio: 1.192">
-          <a href="assets/imgs/artworks/thumbs/1600-concept-art-hivemind-bees.webp"
-           class="gallery-link"
-           data-title="Hivemind Concept - Characters"
-           data-title-spoken="Hivemind Concept - Characters"
-           data-date="2026-04-12"
-           data-description="Simple stylized insects: mostly bees, surrounding a hornet that carries a health bar, alongside a moth. The bees vary in species and color, and some have unique characteristics such as a carapace-covered body, a round smiley face, an anglerfish head, and a split stinger.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-concept-art-hivemind-bees.webp"
-            srcset="assets/imgs/artworks/thumbs/400-concept-art-hivemind-bees.webp 400w,
-                    assets/imgs/artworks/thumbs/800-concept-art-hivemind-bees.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-concept-art-hivemind-bees.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="1809"
-            height="1518"
-            alt="Concept art of stylized bees and a hornet, showing varied species designs."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters|Miscellaneous" style="--ratio: 1.000">
-          <a href="assets/imgs/artworks/thumbs/1600-token-atlas.webp"
-           class="gallery-link"
-           data-title="Token - Atlas"
-           data-title-spoken="Token - Atlas"
-           data-date="2026-03-06"
-           data-description="A round token depicting an artificial construct made of white metal. The image centers on its midsection, where a blue orb floats surrounded by a powerful golden shine, mirrored by the glowing eyes above. The metal looks old, dirty, and rusted. A circular border of deep blue scales with golden highlights frames the piece.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-token-atlas.webp"
-            srcset="assets/imgs/artworks/thumbs/400-token-atlas.webp 400w,
-                    assets/imgs/artworks/thumbs/800-token-atlas.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-token-atlas.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="3000"
-            height="3000"
-            alt="A round character token of Atlas, a white metal construct with a glowing blue orb."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Concept Art|Illustrations" style="--ratio: 1.243">
-          <a href="assets/imgs/artworks/thumbs/1600-concept-art-hivemind.webp"
-           class="gallery-link"
-           data-title="Hivemind Concept - Busy Hive"
-           data-title-spoken="Hivemind Concept - Busy Hive"
-           data-date="2026-02-23"
-           data-description="Various bees travel to and fro within their hive, some of them carrying distinctive characteristics such as double stingers or an anglerfish lure; their crowned queen oversees the work.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-concept-art-hivemind.webp"
-            srcset="assets/imgs/artworks/thumbs/400-concept-art-hivemind.webp 400w,
-                    assets/imgs/artworks/thumbs/800-concept-art-hivemind.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-concept-art-hivemind.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="1492"
-            height="1200"
-            alt="Concept art of bees at work inside their hive, overseen by their crowned queen."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Illustrations" style="--ratio: 0.758">
-          <a href="assets/imgs/artworks/thumbs/1600-secret-santa-2025.webp"
-           class="gallery-link"
-           data-title="The Batless Are Playing"
-           data-title-spoken="The Batless Are Playing"
-           data-date="2025-12-25"
-           data-description="An extremely colorful poster for the fictional band 'The Batless'. The four members of the band stand on pillars of different heights, looking down at the viewer, while an eldritch eye takes the focal point of the piece, with ominous rays of pure light extending forward like tentacles. Beyond the edges of the poster, an explosion of colors draws the viewer in.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-secret-santa-2025.webp"
-            srcset="assets/imgs/artworks/thumbs/400-secret-santa-2025.webp 400w,
-                    assets/imgs/artworks/thumbs/800-secret-santa-2025.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-secret-santa-2025.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="2274"
-            height="3000"
-            alt="A colorful gig poster for the fictional band The Batless, centered on an eldritch eye."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Pixel Art|Characters" style="--ratio: 1.333">
-          <a href="assets/imgs/artworks/thumbs/1600-animated-protagonist-ctrlz.webp"
-           class="gallery-link"
-           data-title="CTRL-Z Animation Cycles"
-           data-title-spoken="Control Z Animation Cycles"
-           data-date="2025-12-07"
-           data-description="A simple pixelated humanoid character with a blue cap and pants and orange overalls. They are shown first standing still, then in their idle animation, and finally in their running animation.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-animated-protagonist-ctrlz.webp"
-            srcset="assets/imgs/artworks/thumbs/400-animated-protagonist-ctrlz.webp 400w,
-                    assets/imgs/artworks/thumbs/800-animated-protagonist-ctrlz.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-animated-protagonist-ctrlz.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="640"
-            height="480"
-            alt="Pixel animation cycles for the CTRL-Z protagonist: standing, idle, and running."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters|Concept Art" style="--ratio: 1.000">
-          <a href="assets/imgs/artworks/thumbs/1600-refsheet-pinocchio.webp"
-           class="gallery-link"
-           data-title="Pinocchio"
-           data-title-spoken="Pinocchio"
-           data-date="2025-09-27"
-           data-description="A wooden, doll-like humanoid creature with dark, dead splinters covering its head and back. It is held like a puppet, strung by invisible strings, and its features are quite round, like joints fitted together on a mannequin. A single hole sits on its face, with a reddened, fiery eye sometimes peering through.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-refsheet-pinocchio.webp"
-            srcset="assets/imgs/artworks/thumbs/400-refsheet-pinocchio.webp 400w,
-                    assets/imgs/artworks/thumbs/800-refsheet-pinocchio.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-refsheet-pinocchio.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="5000"
-            height="5000"
-            alt="Reference sheet for Pinocchio, a splintered wooden puppet creature with a single eye hole."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters|Concept Art" style="--ratio: 1.329">
-          <a href="assets/imgs/artworks/thumbs/1600-refsheet-caino.webp"
-           class="gallery-link"
-           data-title="Caino Longivito"
-           data-title-spoken="Caino Longivito"
-           data-date="2025-08-21"
-           data-description="A fit humanoid owl man with chocolate and milk feathers and deep, dark eyes with orange irises. Feathers on the left side of his cranium are missing, exposing the skin around his left eye, which has turned a blind gray with veiny streaks of sickly green. He wears a full-body plague doctor outfit in browns, creams, and dark reds, with a sealed brass mask fitted to his hood. Beside him stands a companion: a smaller elf woman with a purple complexion, white hair, and brass limbs.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-refsheet-caino.webp"
-            srcset="assets/imgs/artworks/thumbs/400-refsheet-caino.webp 400w,
-                    assets/imgs/artworks/thumbs/800-refsheet-caino.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-refsheet-caino.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="6645"
-            height="5000"
-            alt="Reference sheet for Caino, an owl humanoid plague doctor, with an elf companion."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters|Concept Art" style="--ratio: 1.743">
-          <a href="assets/imgs/artworks/thumbs/1600-refsheet-atlas.webp"
-           class="gallery-link"
-           data-title="Atlas"
-           data-title-spoken="Atlas"
-           data-date="2025-05-13"
-           data-description="A large, bulky, artificial construct of humanoid proportions. The automaton lacks a proper torso, as its bust simply floats above its waist. Its legs and arms are long, extendable tubes ending in rough square hands and boots. Signs of rust and dirt cover its entire surface, making the ceramic-like material underneath look grayish and moldy. A blue orb floats effortlessly at its center, carvings of golden light etched across its surface, the same light that is visible inside its head through its eye lenses.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-refsheet-atlas.webp"
-            srcset="assets/imgs/artworks/thumbs/400-refsheet-atlas.webp 400w,
-                    assets/imgs/artworks/thumbs/800-refsheet-atlas.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-refsheet-atlas.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="6547"
-            height="3756"
-            alt="Reference sheet for Atlas, a bulky rusted automaton with a floating blue orb core."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters|Concept Art" style="--ratio: 1.268">
-          <a href="assets/imgs/artworks/thumbs/1600-refsheet-flip.webp"
-           class="gallery-link"
-           data-title="Flipper Teller"
-           data-title-spoken="Flipper Teller"
-           data-date="2025-04-12"
-           data-description="A thin vulture humanoid man with cream feathers and deep blue skin underneath. His eyes are bright yellow and his skin has gradients of maroon mixed in. The feathers on his head are slicked back, and he wears an intricate burgundy vest with fitted brown pants and open-taloned boots. Golden accessories cover him: gauntlets fit his hands, a pointed piece adorns his beak, and round, red-tinted glasses are strung around his head.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-refsheet-flip.webp"
-            srcset="assets/imgs/artworks/thumbs/400-refsheet-flip.webp 400w,
-                    assets/imgs/artworks/thumbs/800-refsheet-flip.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-refsheet-flip.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="5155"
-            height="4064"
-            alt="Reference sheet for Flip, a vulture humanoid man in a burgundy vest and gold accessories."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Illustrations" style="--ratio: 1.765">
-          <a href="assets/imgs/artworks/thumbs/1600-secret-specter-2024.webp"
-           class="gallery-link"
-           data-title="Accursed Creation"
-           data-title-spoken="Accursed Creation"
-           data-date="2024-10-31"
-           data-description="A humanoid sorcerer with a yellow pyramid for a head performs a ritual in front of a boiling cauldron, manifesting an amalgamation of ink from the stewing pot. The background melts into sickly greens that follow the smoke of the cauldron. He wears a red hood covered in gold, with bags of money around his waist, and each side of his pyramid face bears a glowing green eye.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-secret-specter-2024.webp"
-            srcset="assets/imgs/artworks/thumbs/400-secret-specter-2024.webp 400w,
-                    assets/imgs/artworks/thumbs/800-secret-specter-2024.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-secret-specter-2024.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="3000"
-            height="1700"
-            alt="A pyramid-headed sorcerer conjuring a creature of ink from a boiling cauldron."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Characters|Illustrations" style="--ratio: 0.703">
-          <a href="assets/imgs/artworks/thumbs/1600-illustration-hachi.webp"
-           class="gallery-link"
-           data-title="Hachi"
-           data-title-spoken="Hachi"
-           data-date="2024-10-07"
-           data-description="A small humanoid corgi with orange fur and green eyes, looking up innocently at the viewer. They wear a large red hood with azure overalls underneath. Their ears are pricked up in attention, and they stand sheepishly with their hands and feet together, waiting patiently.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-illustration-hachi.webp"
-            srcset="assets/imgs/artworks/thumbs/400-illustration-hachi.webp 400w,
-                    assets/imgs/artworks/thumbs/800-illustration-hachi.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-illustration-hachi.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="2108"
-            height="3000"
-            alt="Hachi, a small corgi humanoid in a red hood, looking up at the viewer."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Pixel Art|Characters" style="--ratio: 1.000">
-          <a href="assets/imgs/artworks/thumbs/1600-animated-flip.webp"
-           class="gallery-link"
-           data-title="Flip Animated Token"
-           data-title-spoken="Flip Animated Token"
-           data-date="2024-07-23"
-           data-description="A pixelated humanoid vulture with cream feathers, deep blue skin, and golden ornaments. In his idle animation, he brings his shoulders down for a breath and clenches his fist, adorned with a golden gauntlet, before relaxing again.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-animated-flip.webp"
-            srcset="assets/imgs/artworks/thumbs/400-animated-flip.webp 400w,
-                    assets/imgs/artworks/thumbs/800-animated-flip.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-animated-flip.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="177"
-            height="177"
-            alt="An animated pixel token of Flip, a vulture humanoid, in an idle breathing cycle."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-      <li class="gallery-item" data-tags="Pixel Art|Characters" style="--ratio: 1.000">
-          <a href="assets/imgs/artworks/thumbs/1600-animated-whisper.webp"
-           class="gallery-link"
-           data-title="Whisper Animated Token"
-           data-title-spoken="Whisper Animated Token"
-           data-date="2022-08-26"
-           data-description="A pixelated humanoid crow with dark purple feathers and skin, wearing a hood of the same hue and goggles that cover his face. In his idle animation, he bends his knees, pulls out a golden coin, inspects it, and puts it back in his pocket.">
-          <img
-            src="assets/imgs/artworks/thumbs/400-animated-whisper.webp"
-            srcset="assets/imgs/artworks/thumbs/400-animated-whisper.webp 400w,
-                    assets/imgs/artworks/thumbs/800-animated-whisper.webp 800w,
-                    assets/imgs/artworks/thumbs/1600-animated-whisper.webp 1600w"
-            sizes="(min-width: 700px) 600px, 95vw"
-            width="375"
-            height="375"
-            alt="An animated pixel token of Whisper, a hooded crow humanoid, inspecting a gold coin."
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </li>
-    </ul>
-    <!--GALLERY:END-->
+        <ul role="list" class="gallery" data-reveal-stagger>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Concept Art|Characters"
+            style="--ratio: 1.455"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-human-flip.webp"
+              class="gallery-link"
+              data-title="Human Flip Teller"
+              data-title-spoken="Human Flip Teller"
+              data-date="2026-07-05"
+              data-description="The bust of a thin, pallid man with silky yellow hair slicked back and golden eyes with heavy bags underneath. He wears round, red-tinted glasses with golden frames, rings on his blue lips and ears, and an elegant green tie over a light blue shirt and a burgundy vest."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-human-flip.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-human-flip.webp   400w,
+                  assets/imgs/artworks/thumbs/800-human-flip.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-human-flip.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="3069"
+                height="2109"
+                alt="A bust portrait of Flip in human form, with slicked yellow hair and tinted glasses."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters|Miscellaneous"
+            style="--ratio: 1"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-refsheet-bob.webp"
+              class="gallery-link"
+              data-title="The Fighter"
+              data-title-spoken="The Fighter"
+              data-date="2026-06-02"
+              data-description="A muscular human man with olive skin, blond hair, and a goatee. His left eye is missing and covered by an eyepatch, leaving a single green eye, and his right arm is entirely mechanical. He wears simple vertically striped clothes, wields a broken claymore in one hand, and carries a small battle hammer at his side. Lightning surges through his body when he is angered."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-refsheet-bob.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-refsheet-bob.webp   400w,
+                  assets/imgs/artworks/thumbs/800-refsheet-bob.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-refsheet-bob.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="7100"
+                height="7100"
+                alt="Reference sheet for a one-eyed human fighter with a mechanical right arm."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters"
+            style="--ratio: 1.063"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-refsheet-demidi.webp"
+              class="gallery-link"
+              data-title="Demidi"
+              data-title-spoken="Demidi"
+              data-date="2026-06-01"
+              data-description="A plus-sized satyr woman with black skin, bright green eyes, and golden locks cut at neck height that frame her face. She has a gap-toothed smile and wears a wooden mask over the right side of her face. The arm on that side is missing and the stump is held in a brace, while the leg is replaced at the knee by a wooden prosthetic. She is dressed in vivid greens, her nails are painted cyan, her skin carries white markings in a Greco-Roman style, and her body is adorned with jewelry: a nose ring, earrings, a glass heart necklace, and a ring on her finger."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-refsheet-demidi.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-refsheet-demidi.webp   400w,
+                  assets/imgs/artworks/thumbs/800-refsheet-demidi.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-refsheet-demidi.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="5000"
+                height="4705"
+                alt="Reference sheet for Demidi, a plus-sized satyr woman with a wooden mask and prosthetic leg."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Illustrations"
+            style="--ratio: 1.986"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-illustration-forget-me.webp"
+              class="gallery-link"
+              data-title="Forget Me"
+              data-title-spoken="Forget Me"
+              data-date="2026-05-24"
+              data-description="A blue dragon humanoid lies on a gray wooden floor surrounded by messy papers. Her body and tail are curled around a central orb that gives off a diffused yellow light, which shines on the tears in her eyes."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-illustration-forget-me.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-illustration-forget-me.webp   400w,
+                  assets/imgs/artworks/thumbs/800-illustration-forget-me.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-illustration-forget-me.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="3167"
+                height="1595"
+                alt="A blue dragon humanoid curled around a glowing orb on a paper-strewn floor, crying."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters|Concept Art"
+            style="--ratio: 0.759"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-refsheet-avalis.webp"
+              class="gallery-link"
+              data-title="The Inventor"
+              data-title-spoken="The Inventor"
+              data-date="2026-05-21"
+              data-description="A fit blue dragon humanoid woman with hanging thread-like frills and accents of yellow in her eyes, tail, and talons. Sketchy studies of her trapezoidal head shape accompany two illustrations of her in different outfits: first, simple everyday attire with deep navy shorts and a burgundy top; second, adventuring gear with a large yellow jumper and pieces of ceramic armor on top."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-refsheet-avalis.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-refsheet-avalis.webp   400w,
+                  assets/imgs/artworks/thumbs/800-refsheet-avalis.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-refsheet-avalis.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="4222"
+                height="5560"
+                alt="Reference sheet for a blue dragon humanoid woman shown in two outfits."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters|Illustrations|Miscellaneous"
+            style="--ratio: 1"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-illustration-hate.webp"
+              class="gallery-link"
+              data-title="Product of Hate"
+              data-title-spoken="Product of Hate"
+              data-date="2026-05-01"
+              data-description="A lumpy, wrinkly, overly detailed creature with a worm-like structure. All of its segments look inflated, as if the organs underneath were ready to burst through the gray, ashen skin, and its veins burn through the thin layer like coursing lava. Its appendages have been reduced to rounded stumps, and its eyes are empty white cavities that emanate smoke. The ground around the creature's inhuman mass is covered in dark red stains."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-illustration-hate.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-illustration-hate.webp   400w,
+                  assets/imgs/artworks/thumbs/800-illustration-hate.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-illustration-hate.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="3000"
+                height="3000"
+                alt="A bloated, worm-like creature with stump limbs and smoking hollow eyes."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Concept Art|Illustrations"
+            style="--ratio: 1.842"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-concept-art-hivemind-rain.webp"
+              class="gallery-link"
+              data-title="Hivemind Concept - Flooded"
+              data-title-spoken="Hivemind Concept - Flooded"
+              data-date="2026-04-15"
+              data-description="Two bees fly out from the naked branches of a tree to look at the approaching gray skies of a coming storm, while small droplets of rain have already begun falling on them."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-concept-art-hivemind-rain.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-concept-art-hivemind-rain.webp   400w,
+                  assets/imgs/artworks/thumbs/800-concept-art-hivemind-rain.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-concept-art-hivemind-rain.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="2943"
+                height="1598"
+                alt="Concept art of two bees watching a storm approach from a bare tree branch."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Concept Art|Illustrations"
+            style="--ratio: 1.793"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-concept-art-hivemind-event.webp"
+              class="gallery-link"
+              data-title="Hivemind Concept - Surrounded"
+              data-title-spoken="Hivemind Concept - Surrounded"
+              data-date="2026-04-13"
+              data-description="A bee at the center is surrounded by the dark silhouettes of a wasp, an ant, and a spider. The eyes of all three adversaries are a striking, enraged red, while the bee is drawn over a calming light blue but looks panicked."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-concept-art-hivemind-event.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-concept-art-hivemind-event.webp   400w,
+                  assets/imgs/artworks/thumbs/800-concept-art-hivemind-event.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-concept-art-hivemind-event.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="2632"
+                height="1468"
+                alt="Concept art of a panicked bee surrounded by the silhouettes of three predators."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Concept Art|Characters"
+            style="--ratio: 1.192"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-concept-art-hivemind-bees.webp"
+              class="gallery-link"
+              data-title="Hivemind Concept - Characters"
+              data-title-spoken="Hivemind Concept - Characters"
+              data-date="2026-04-12"
+              data-description="Simple stylized insects: mostly bees, surrounding a hornet that carries a health bar, alongside a moth. The bees vary in species and color, and some have unique characteristics such as a carapace-covered body, a round smiley face, an anglerfish head, and a split stinger."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-concept-art-hivemind-bees.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-concept-art-hivemind-bees.webp   400w,
+                  assets/imgs/artworks/thumbs/800-concept-art-hivemind-bees.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-concept-art-hivemind-bees.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="1809"
+                height="1518"
+                alt="Concept art of stylized bees and a hornet, showing varied species designs."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters|Miscellaneous"
+            style="--ratio: 1"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-token-atlas.webp"
+              class="gallery-link"
+              data-title="Token - Atlas"
+              data-title-spoken="Token - Atlas"
+              data-date="2026-03-06"
+              data-description="A round token depicting an artificial construct made of white metal. The image centers on its midsection, where a blue orb floats surrounded by a powerful golden shine, mirrored by the glowing eyes above. The metal looks old, dirty, and rusted. A circular border of deep blue scales with golden highlights frames the piece."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-token-atlas.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-token-atlas.webp   400w,
+                  assets/imgs/artworks/thumbs/800-token-atlas.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-token-atlas.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="3000"
+                height="3000"
+                alt="A round character token of Atlas, a white metal construct with a glowing blue orb."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Concept Art|Illustrations"
+            style="--ratio: 1.243"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-concept-art-hivemind.webp"
+              class="gallery-link"
+              data-title="Hivemind Concept - Busy Hive"
+              data-title-spoken="Hivemind Concept - Busy Hive"
+              data-date="2026-02-23"
+              data-description="Various bees travel to and fro within their hive, some of them carrying distinctive characteristics such as double stingers or an anglerfish lure; their crowned queen oversees the work."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-concept-art-hivemind.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-concept-art-hivemind.webp   400w,
+                  assets/imgs/artworks/thumbs/800-concept-art-hivemind.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-concept-art-hivemind.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="1492"
+                height="1200"
+                alt="Concept art of bees at work inside their hive, overseen by their crowned queen."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Illustrations"
+            style="--ratio: 0.758"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-secret-santa-2025.webp"
+              class="gallery-link"
+              data-title="The Batless Are Playing"
+              data-title-spoken="The Batless Are Playing"
+              data-date="2025-12-25"
+              data-description="An extremely colorful poster for the fictional band 'The Batless'. The four members of the band stand on pillars of different heights, looking down at the viewer, while an eldritch eye takes the focal point of the piece, with ominous rays of pure light extending forward like tentacles. Beyond the edges of the poster, an explosion of colors draws the viewer in."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-secret-santa-2025.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-secret-santa-2025.webp   400w,
+                  assets/imgs/artworks/thumbs/800-secret-santa-2025.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-secret-santa-2025.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="2274"
+                height="3000"
+                alt="A colorful gig poster for the fictional band The Batless, centered on an eldritch eye."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Pixel Art|Characters"
+            style="--ratio: 1.333"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-animated-protagonist-ctrlz.webp"
+              class="gallery-link"
+              data-title="CTRL-Z Animation Cycles"
+              data-title-spoken="Control Z Animation Cycles"
+              data-date="2025-12-07"
+              data-description="A simple pixelated humanoid character with a blue cap and pants and orange overalls. They are shown first standing still, then in their idle animation, and finally in their running animation."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-animated-protagonist-ctrlz.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-animated-protagonist-ctrlz.webp   400w,
+                  assets/imgs/artworks/thumbs/800-animated-protagonist-ctrlz.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-animated-protagonist-ctrlz.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="640"
+                height="480"
+                alt="Pixel animation cycles for the CTRL-Z protagonist: standing, idle, and running."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters|Concept Art"
+            style="--ratio: 1"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-refsheet-pinocchio.webp"
+              class="gallery-link"
+              data-title="Pinocchio"
+              data-title-spoken="Pinocchio"
+              data-date="2025-09-27"
+              data-description="A wooden, doll-like humanoid creature with dark, dead splinters covering its head and back. It is held like a puppet, strung by invisible strings, and its features are quite round, like joints fitted together on a mannequin. A single hole sits on its face, with a reddened, fiery eye sometimes peering through."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-refsheet-pinocchio.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-refsheet-pinocchio.webp   400w,
+                  assets/imgs/artworks/thumbs/800-refsheet-pinocchio.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-refsheet-pinocchio.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="5000"
+                height="5000"
+                alt="Reference sheet for Pinocchio, a splintered wooden puppet creature with a single eye hole."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters|Concept Art"
+            style="--ratio: 1.329"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-refsheet-caino.webp"
+              class="gallery-link"
+              data-title="Caino Longivito"
+              data-title-spoken="Caino Longivito"
+              data-date="2025-08-21"
+              data-description="A fit humanoid owl man with chocolate and milk feathers and deep, dark eyes with orange irises. Feathers on the left side of his cranium are missing, exposing the skin around his left eye, which has turned a blind gray with veiny streaks of sickly green. He wears a full-body plague doctor outfit in browns, creams, and dark reds, with a sealed brass mask fitted to his hood. Beside him stands a companion: a smaller elf woman with a purple complexion, white hair, and brass limbs."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-refsheet-caino.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-refsheet-caino.webp   400w,
+                  assets/imgs/artworks/thumbs/800-refsheet-caino.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-refsheet-caino.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="6645"
+                height="5000"
+                alt="Reference sheet for Caino, an owl humanoid plague doctor, with an elf companion."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters|Concept Art"
+            style="--ratio: 1.743"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-refsheet-atlas.webp"
+              class="gallery-link"
+              data-title="Atlas"
+              data-title-spoken="Atlas"
+              data-date="2025-05-13"
+              data-description="A large, bulky, artificial construct of humanoid proportions. The automaton lacks a proper torso, as its bust simply floats above its waist. Its legs and arms are long, extendable tubes ending in rough square hands and boots. Signs of rust and dirt cover its entire surface, making the ceramic-like material underneath look grayish and moldy. A blue orb floats effortlessly at its center, carvings of golden light etched across its surface, the same light that is visible inside its head through its eye lenses."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-refsheet-atlas.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-refsheet-atlas.webp   400w,
+                  assets/imgs/artworks/thumbs/800-refsheet-atlas.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-refsheet-atlas.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="6547"
+                height="3756"
+                alt="Reference sheet for Atlas, a bulky rusted automaton with a floating blue orb core."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters|Concept Art"
+            style="--ratio: 1.268"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-refsheet-flip.webp"
+              class="gallery-link"
+              data-title="Flipper Teller"
+              data-title-spoken="Flipper Teller"
+              data-date="2025-04-12"
+              data-description="A thin vulture humanoid man with cream feathers and deep blue skin underneath. His eyes are bright yellow and his skin has gradients of maroon mixed in. The feathers on his head are slicked back, and he wears an intricate burgundy vest with fitted brown pants and open-taloned boots. Golden accessories cover him: gauntlets fit his hands, a pointed piece adorns his beak, and round, red-tinted glasses are strung around his head."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-refsheet-flip.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-refsheet-flip.webp   400w,
+                  assets/imgs/artworks/thumbs/800-refsheet-flip.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-refsheet-flip.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="5155"
+                height="4064"
+                alt="Reference sheet for Flip, a vulture humanoid man in a burgundy vest and gold accessories."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Illustrations"
+            style="--ratio: 1.765"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-secret-specter-2024.webp"
+              class="gallery-link"
+              data-title="Accursed Creation"
+              data-title-spoken="Accursed Creation"
+              data-date="2024-10-31"
+              data-description="A humanoid sorcerer with a yellow pyramid for a head performs a ritual in front of a boiling cauldron, manifesting an amalgamation of ink from the stewing pot. The background melts into sickly greens that follow the smoke of the cauldron. He wears a red hood covered in gold, with bags of money around his waist, and each side of his pyramid face bears a glowing green eye."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-secret-specter-2024.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-secret-specter-2024.webp   400w,
+                  assets/imgs/artworks/thumbs/800-secret-specter-2024.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-secret-specter-2024.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="3000"
+                height="1700"
+                alt="A pyramid-headed sorcerer conjuring a creature of ink from a boiling cauldron."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Characters|Illustrations"
+            style="--ratio: 0.703"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-illustration-hachi.webp"
+              class="gallery-link"
+              data-title="Hachi"
+              data-title-spoken="Hachi"
+              data-date="2024-10-07"
+              data-description="A small humanoid corgi with orange fur and green eyes, looking up innocently at the viewer. They wear a large red hood with azure overalls underneath. Their ears are pricked up in attention, and they stand sheepishly with their hands and feet together, waiting patiently."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-illustration-hachi.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-illustration-hachi.webp   400w,
+                  assets/imgs/artworks/thumbs/800-illustration-hachi.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-illustration-hachi.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="2108"
+                height="3000"
+                alt="Hachi, a small corgi humanoid in a red hood, looking up at the viewer."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Pixel Art|Characters"
+            style="--ratio: 1"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-animated-flip.webp"
+              class="gallery-link"
+              data-title="Flip Animated Token"
+              data-title-spoken="Flip Animated Token"
+              data-date="2024-07-23"
+              data-description="A pixelated humanoid vulture with cream feathers, deep blue skin, and golden ornaments. In his idle animation, he brings his shoulders down for a breath and clenches his fist, adorned with a golden gauntlet, before relaxing again."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-animated-flip.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-animated-flip.webp   400w,
+                  assets/imgs/artworks/thumbs/800-animated-flip.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-animated-flip.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="177"
+                height="177"
+                alt="An animated pixel token of Flip, a vulture humanoid, in an idle breathing cycle."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+          <li
+            class="gallery-item"
+            data-reveal="fade"
+            data-tags="Pixel Art|Characters"
+            style="--ratio: 1"
+          >
+            <a
+              href="assets/imgs/artworks/thumbs/1600-animated-whisper.webp"
+              class="gallery-link"
+              data-title="Whisper Animated Token"
+              data-title-spoken="Whisper Animated Token"
+              data-date="2022-08-26"
+              data-description="A pixelated humanoid crow with dark purple feathers and skin, wearing a hood of the same hue and goggles that cover his face. In his idle animation, he bends his knees, pulls out a golden coin, inspects it, and puts it back in his pocket."
+            >
+              <img
+                src="assets/imgs/artworks/thumbs/400-animated-whisper.webp"
+                srcset="
+                  assets/imgs/artworks/thumbs/400-animated-whisper.webp   400w,
+                  assets/imgs/artworks/thumbs/800-animated-whisper.webp   800w,
+                  assets/imgs/artworks/thumbs/1600-animated-whisper.webp 1600w
+                "
+                sizes="(min-width: 700px) 600px, 95vw"
+                width="375"
+                height="375"
+                alt="An animated pixel token of Whisper, a hooded crow humanoid, inspecting a gold coin."
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+        </ul>
+        <!--GALLERY:END-->
         <p class="gallery-empty" hidden>
           Nothing here but the sound of works in progress.
         </p>
@@ -740,23 +945,42 @@
       </section>
 
       <section id="about">
-        <h2>About Me</h2>
-        <div class="description">
+        <hr data-reveal="grow" />
+        <div class="section-intro" data-reveal="blur">
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about-me-container">
           <img
+            data-reveal="left"
+            style="--reveal-distance: 30vw; --reveal-fade-duration: 1200ms"
             class="about-me-pic"
             src="assets/imgs/profile-picture-about-me.webp"
           />
-          <p>
-            <!--Hi! I'm Marco, also known as Delta. I'm a game developer and systems
-          designer based in Italy and I'm currently about to graduate from the
-          Politecnico of Milan in Computer Science. I love creating immersive
-          experiences and bringing ideas to life through code and design.-->
-          </p>
+          <div
+            class="about-me-description"
+            data-reveal-stagger="250"
+            data-reveal-cascade
+          >
+            <p data-reveal>
+              Hi! I'm <b>Marco</b>, also known as <b>Delta</b> online. I'm from
+              Italy and I'm a Master's graduate in Computer Science, attended at
+              the Politecnico of Milan, where I've learned most of the technical
+              skills that have gotten me where I am today.
+            </p>
+            <p data-reveal>
+              While- my heart has always been one of an <b>artist</b>
+            </p>
+            <p data-reveal>I've been playing games</p>
+          </div>
         </div>
       </section>
 
       <section id="contact">
-        <h2>Let's get in touch!</h2>
+        <hr data-reveal="grow" />
+        <div class="section-intro" data-reveal="blur">
+          <h2>Let's get in touch!</h2>
+        </div>
         <p>
           <!--Have a question or want to work together? Feel free to reach out!-->
         </p>
