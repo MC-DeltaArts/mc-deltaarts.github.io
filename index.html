@@ -36,6 +36,7 @@
       document.documentElement.classList.add("js-reveal");
     </script>
     <script src="scripts/reveal.js" defer></script>
+    <script src="scripts/typewriter.js" defer></script>
   </head>
 
   <body id="home">
@@ -90,14 +91,20 @@
     -->
       <div class="intro-banner">
         <div class="intro-text">
-          <h1 data-reveal="left">
-            Hi, I'm <br />
-            Marco Caramazza!
+          <h1>
+            <span class="visually-hidden">Hi, I'm Marco Caramazza</span>
+            <span class="intro-greeting" aria-hidden="true">Hi, I'm</span>
+            <span class="type-stack intro-title" aria-hidden="true">
+              <span class="type-live"
+                ><span class="type-text"></span><span class="type-caret"></span
+              ></span>
+            </span>
           </h1>
-          <p data-reveal="left">
-            Game Developer and Systems Designer with a passion for creating
-            immersive experiences. Welcome to my portfolio where you can explore
-            my projects, learn more about me, and get in touch!
+          <p class="intro-subtitle">
+            <span class="visually-hidden">Welcome to my portfolio</span>
+            <span class="type-stack" aria-hidden="true">
+              <span class="type-live"><span class="type-text"></span></span>
+            </span>
           </p>
         </div>
       </div>
@@ -121,8 +128,8 @@
                 <div class="project-thumbnail">
                   <img
                     class="thumbnail-image"
-                    src="assets/imgs/delta-banner.png"
-                    alt="Space Shooter Thumbnail"
+                    src="assets/imgs/project-thumbs/thumbnail-hivemind.webp"
+                    alt="Hivemind's Thumbnail"
                   />
                   <span class="badge thumbnail-badge-engine">
                     <img
@@ -139,15 +146,22 @@
                 <div class="project-content">
                   <h3 class="project-title"><strong>Hivemind</strong></h3>
                   <p class="project-description">
-                    Aaaaaaa aaaaaa+aaaa aaaaaaaaaaaaùaa aaaaaaaaaaa aaaaaaaaaaa
-                    aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaa 2D pixel-art
-                    artificial life simulator.
+                    A 2D pixel-art artificial life simulation, where players
+                    guide a colony of bees through challenges and harsh
+                    conditions, striving not only to survive but to become the
+                    most powerful hive, by gathering resources and creating…
+                    quite strange new breeds of bees.
                   </p>
                   <ul role="list" class="tag-list">
                     <li class="tag">Online Co-op</li>
                     <li class="tag">Artificial Life</li>
                     <li class="tag">2D Pixel-Art</li>
-                    <li class="tag tag-more">+2 More</li>
+                    <li
+                      class="tag tag-more"
+                      title="Managerial, Random Events, House Builder, Mutations"
+                    >
+                      +4 More
+                    </li>
                   </ul>
                 </div>
               </a>
@@ -161,8 +175,8 @@
                 <div class="project-thumbnail">
                   <img
                     class="thumbnail-image"
-                    src="assets/imgs/delta-banner.png"
-                    alt="Space Shooter Thumbnail"
+                    src="assets/imgs/project-thumbs/thumbnail-seats-for-all.webp"
+                    alt="Seats For All's Thumbnail"
                   />
                   <span class="badge thumbnail-badge-engine">
                     <img
@@ -172,20 +186,26 @@
                     />
                     Unity
                   </span>
-                  <span class="badge thumbnail-badge-status"
-                    >In Development</span
-                  >
                 </div>
                 <div class="project-content">
                   <h3 class="project-title"><strong>Seats For All</strong></h3>
                   <p class="project-description">
-                    A 2D pixel-art artificial life simulator.
+                    A real-time VR Unity-based application meant to guide
+                    neurodivergent children through the steps of playing a board
+                    game, and help them express their creativity and ideas in a
+                    way that makes them feel self-sufficient, combining ML
+                    detection for cards and AI assistive technologies.
                   </p>
                   <ul role="list" class="tag-list">
                     <li class="tag">Virtual Reality</li>
-                    <li class="tag">LLMs</li>
-                    <li class="tag"></li>
-                    <li class="tag tag-more">+2 More</li>
+                    <li class="tag">Board Games</li>
+                    <li class="tag">Image Analysis</li>
+                    <li
+                      class="tag tag-more"
+                      title="LLMs, Therapeutic, Neurodivergent, Digital Assistants"
+                    >
+                      +4 More
+                    </li>
                   </ul>
                 </div>
               </a>
@@ -199,8 +219,8 @@
                 <div class="project-thumbnail">
                   <img
                     class="thumbnail-image"
-                    src="assets/imgs/delta-banner.png"
-                    alt="Space Shooter Thumbnail"
+                    src="assets/imgs/project-thumbs/thumbnail-enchanted-forest.webp"
+                    alt="Enchanted Forest's Thumbnail"
                   />
                   <span class="badge thumbnail-badge-engine">
                     <img
@@ -219,13 +239,19 @@
                     <strong>Enchanted Forest</strong>
                   </h3>
                   <p class="project-description">
-                    A 2D pixel-art artificial life simulator.
+                    A Vulkan 3D explorative experience where the player
+                    navigates a magical forest looking for treasure. The player
+                    can light their way along the forest by watering plants, eat
+                    mushrooms to turn themselves small, and feed the animals
+                    scattered about to progress the adventure.
                   </p>
                   <ul role="list" class="tag-list">
-                    <li class="tag">Online Co-op</li>
-                    <li class="tag">Artificial Life</li>
-                    <li class="tag">2D Pixel-Art</li>
-                    <li class="tag tag-more">+2 More</li>
+                    <li class="tag">Computer Graphics</li>
+                    <li class="tag">3D Modeling</li>
+                    <li class="tag">Exploration</li>
+                    <li class="tag tag-more" title="Singleplayer, C++, Shaders">
+                      +3 More
+                    </li>
                   </ul>
                 </div>
               </a>
@@ -239,8 +265,8 @@
                 <div class="project-thumbnail">
                   <img
                     class="thumbnail-image"
-                    src="assets/imgs/delta-banner.png"
-                    alt="Space Shooter Thumbnail"
+                    src="assets/imgs/project-thumbs/thumbnail-ctrlz.webp"
+                    alt="CTRL-Z Thumbnail"
                   />
                   <span class="badge thumbnail-badge-engine">
                     <img
@@ -250,20 +276,27 @@
                     />
                     Unity
                   </span>
-                  <span class="badge thumbnail-badge-status"
-                    >In Development</span
-                  >
                 </div>
                 <div class="project-content">
                   <h3 class="project-title"><strong>CTRL-V</strong></h3>
                   <p class="project-description">
-                    A 2D pixel-art artificial life simulator.
+                    A 2D side-scrolling platformer where you enter the digital
+                    world of your corrupted computer through a newly installed
+                    antivirus program called CTRL-V. Copy, cut, paste and undo
+                    objects, the shortcuts are your keys to victory: use them
+                    wisely to manipulate your surroundings, overcome threats,
+                    and restore stability to the system.
                   </p>
                   <ul role="list" class="tag-list">
-                    <li class="tag">Online Co-op</li>
-                    <li class="tag">Artificial Life</li>
+                    <li class="tag">Platformer</li>
+                    <li class="tag">Puzzle</li>
                     <li class="tag">2D Pixel-Art</li>
-                    <li class="tag tag-more">+2 More</li>
+                    <li
+                      class="tag tag-more"
+                      title="Singleplayer, Action, Side-Scroller"
+                    >
+                      +3 More
+                    </li>
                   </ul>
                 </div>
               </a>

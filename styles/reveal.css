@@ -25,10 +25,6 @@
     animation-name: reveal-slide-left, reveal-fade;
   }
 
-  .js-reveal [data-reveal="zoom"].is-revealed {
-    animation-name: reveal-zoom, reveal-fade;
-  }
-
   .js-reveal [data-reveal="fade"].is-revealed {
     animation-name: none, reveal-fade;
   }
@@ -42,8 +38,8 @@
     animation-name: reveal-blur, reveal-fade;
   }
 
-  .js-reveal [data-reveal="grow"].is-revealed {
-    animation-name: reveal-grow, reveal-opaque;
+  .js-reveal [data-reveal="blur-up"].is-revealed {
+    animation-name: reveal-blur-up, reveal-fade;
   }
 }
 
@@ -59,15 +55,6 @@
 @keyframes reveal-slide-left {
   from {
     transform: translate3d(calc(-1 * var(--reveal-distance)), 0, 0);
-  }
-  to {
-    transform: none;
-  }
-}
-
-@keyframes reveal-zoom {
-  from {
-    transform: scale(var(--reveal-scale));
   }
   to {
     transform: none;
@@ -92,11 +79,13 @@
   }
 }
 
-@keyframes reveal-grow {
+@keyframes reveal-blur-up {
   from {
-    transform: scaleX(0);
+    filter: blur(10px);
+    transform: translate3d(0, var(--reveal-distance), 0);
   }
   to {
+    filter: none;
     transform: none;
   }
 }
