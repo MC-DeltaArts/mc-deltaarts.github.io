@@ -890,6 +890,7 @@ section {
 .about-me-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
   margin: 0 auto;
   padding: 0 2rem;
@@ -898,6 +899,7 @@ section {
 
 .about-me-pic {
   max-width: 30%;
+  height: auto;
   border: 4px solid var(--green);
   border-radius: 100px;
   transition: all 0.3s ease-out;
@@ -938,4 +940,51 @@ section {
   .about-me-description {
     max-width: 100%;
   }
+}
+
+.three-words-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 1000px) {
+  .three-words-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+h4 {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.three-words {
+  background-color: #0d0d0d;
+  padding: 2rem;
+  transition: transform 0.2s ease-out;
+  border-radius: 20px 50px;
+  border: double 3px var(--green);
+  max-width: 500px;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+@media (hover: hover) {
+  .three-words:hover {
+    transform: scale(1.05);
+  }
+}
+
+.three-words:focus-within {
+  transform: scale(1.1);
+}
+
+.three-words p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: #888;
+  margin: 1.5rem auto;
+  padding: 1rem;
 }
