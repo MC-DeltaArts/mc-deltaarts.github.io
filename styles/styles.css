@@ -958,7 +958,7 @@ section {
 }
 
 h4 {
-  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
 }
 
 .three-words {
@@ -983,7 +983,7 @@ h4 {
 }
 
 .three-words p {
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
   color: #888;
   margin: 1.5rem auto;
   padding: 1rem;
