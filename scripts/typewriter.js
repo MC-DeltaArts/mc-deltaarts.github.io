@@ -68,6 +68,14 @@ if (titleStack && subtitleStack) {
     subtitleLive.classList.add("is-visible");
     caret.remove();
   } else {
+    buildSizers(
+      titleStack,
+      TITLES.map((title) => title.text),
+    );
+    buildSizers(
+      subtitleStack,
+      TITLES.flatMap((title) => title.subtitles.map((sub) => sub.text)),
+    );
     run();
   }
 
