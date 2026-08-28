@@ -31,16 +31,32 @@
 
     <link href="styles/reveal.css" rel="stylesheet" />
 
-    <script>
-      window.addEventListener("error", function (event) {
-        var box = document.createElement("pre");
+<script>
+  (function () {
+    var box = null;
+    function log(text) {
+      if (!box) {
+        box = document.createElement("pre");
         box.style.cssText =
-          "position:fixed;bottom:0;left:0;right:0;z-index:9999;margin:0;padding:1rem;background:#900;color:#fff;font-size:14px;white-space:pre-wrap";
-        box.textContent =
-          event.message + "\n" + event.filename + ":" + event.lineno;
+          "position:fixed;bottom:0;left:0;right:0;max-height:50%;overflow:auto;z-index:9999;margin:0;padding:1rem;background:#900;color:#fff;font-size:13px;white-space:pre-wrap";
         document.body.appendChild(box);
-      });
-    </script>
+      }
+      box.textContent += text + "\n\n";
+    }
+    window.addEventListener("error", function (event) {
+      log(
+        event.message +
+          "\n@ " +
+          (event.filename || "(no file)") +
+          ":" +
+          event.lineno,
+      );
+    });
+    window.addEventListener("unhandledrejection", function (event) {
+      log("Unhandled promise: " + event.reason);
+    });
+  })();
+</script>
 
     <script src="scripts/gallery.js" defer></script>
 
@@ -70,7 +86,7 @@
           <span class="nav-toggle-bars"></span>
         </button>
         <ul id="nav-menu" hidden>
-          <li><a class="nav-link" href="#projects"> Projectz </a></li>
+          <li><a class="nav-link" href="#projects"> Projects </a></li>
           <li><a class="nav-link" href="#artworks"> Artworks </a></li>
           <li><a class="nav-link" href="#about"> About </a></li>
           <li><a class="nav-link" href="#contact"> Contact </a></li>

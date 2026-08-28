@@ -74,10 +74,7 @@ if (titleStack && subtitleStack) {
     );
     buildSizers(
       subtitleStack,
-      TITLES.reduce(
-        (texts, title) => texts.concat(title.subtitles.map((sub) => sub.text)),
-        [],
-      ),
+      TITLES.flatMap((title) => title.subtitles.map((sub) => sub.text)),
     );
     run();
   }
