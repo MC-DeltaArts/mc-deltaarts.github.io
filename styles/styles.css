@@ -129,6 +129,13 @@ p b {
   color: var(--green);
 }
 
+.resume-icon {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.2em;
+  margin-right: rem;
+}
+
 @media (hover: hover) {
   .resume-link:hover {
     filter: brightness(0.75);
@@ -273,7 +280,7 @@ p b {
 }
 
 .intro-banner {
-  background-image: url("../assets/imgs/delta-banner.png");
+  background-image: url("../assets/imgs/thumnail_2026.webp");
   background-size: cover;
   background-position: center;
   text-align: left;
@@ -287,7 +294,7 @@ p b {
   flex-direction: column;
   justify-content: center;
   padding: 0 4rem;
-  background-color: rgba(0, 0, 0, 0.5);
+
   min-height: 100vh;
 }
 
@@ -302,6 +309,7 @@ p b {
   font-size: clamp(1.5rem, 4vw, 2rem);
   padding-right: 40%;
   margin-top: 0;
+  font-style: italic;
 }
 
 .intro-text .intro-subtitle {
@@ -745,6 +753,47 @@ section {
   color: #888;
 }
 
+.ellipsis span {
+  opacity: 0;
+}
+
+.ellipsis span:nth-child(1) {
+  animation: ellipsis-second 1.5s infinite;
+}
+
+.ellipsis span:nth-child(2) {
+  animation: ellipsis-third 1.5s infinite;
+}
+
+@keyframes ellipsis-second {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ellipsis-third {
+  0%,
+  66% {
+    opacity: 0;
+  }
+  67%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ellipsis span {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 .load-more {
   font-family: inherit;
   font-size: 1rem;
@@ -1056,7 +1105,7 @@ section {
   .contact-links a:hover {
     color: var(--green);
     background-color: rgba(136, 255, 136, 0.12);
-    transform: scale(1.15) rotate(-8deg);
+    transform: scale(1.15) rotate(8deg);
   }
 }
 
