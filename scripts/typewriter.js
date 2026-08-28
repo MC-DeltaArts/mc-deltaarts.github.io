@@ -1,61 +1,56 @@
-const TITLES = [
-  {
-    text: "Marco Caramazza",
-    weight: 3,
-    hold: 4000,
-    subtitles: [
-      { text: "Welcome to my portfolio", weight: 3 },
-      { text: "Hope you stay a while", weight: 1 },
-    ],
-  },
-  {
-    text: "An Artist",
-    weight: 1,
-    subtitles: [{ text: "Drawing longer than I've been coding", weight: 1 }],
-  },
-  {
-    text: "A Game Designer",
-    weight: 1,
-    subtitles: [{ text: "Systems first, pixels second", weight: 1 }],
-  },
-];
+(function () {
+  const TITLES = [
+    {
+      text: "Marco Caramazza",
+      weight: 3,
+      hold: 4000,
+      subtitles: [
+        { text: "Welcome to my portfolio", weight: 3 },
+        { text: "Hope you stay a while!", weight: 1 },
+      ],
+    },
+    {
+      text: "Delta",
+      weight: 1,
+      subtitles: [
+        { text: "Or at least that's what they call me", weight: 3 },
+        { text: "The greek delta and epsilon are optional", weight: 1 },
+      ],
+    },
+    {
+      text: "An Artist",
+      weight: 1,
+      subtitles: [
+        { text: "Drawing longer than I've been coding", weight: 1 },
+        { text: "Let's make some art together" },
+      ],
+    },
+    {
+      text: "A Game Designer",
+      weight: 1,
+      subtitles: [
+        { text: "If I make 'em, I play 'em", weight: 1 },
+        { text: "Your vision? My pleasure" },
+      ],
+    },
+  ];
 
-const TYPE_SPEED = 90;
-const DELETE_SPEED = 45;
-const HOLD = 3000;
-const PAUSE_BEFORE_TYPING = 400;
-const SUBTITLE_IN = 700;
-const SUBTITLE_OUT = 350;
+  const TYPE_SPEED = 90;
+  const DELETE_SPEED = 45;
+  const HOLD = 3000;
+  const PAUSE_BEFORE_TYPING = 400;
+  const SUBTITLE_IN = 700;
+  const SUBTITLE_OUT = 350;
 
-const titleStack = document.querySelector(".intro-title");
-const subtitleStack = document.querySelector(".intro-subtitle .type-stack");
+  const titleStack = document.querySelector(".intro-title");
+  const subtitleStack = document.querySelector(".intro-subtitle .type-stack");
 
-if (titleStack && subtitleStack) {
+  if (!titleStack || !subtitleStack) return;
+
   const titleText = titleStack.querySelector(".type-text");
   const caret = titleStack.querySelector(".type-caret");
   const subtitleLive = subtitleStack.querySelector(".type-live");
   const subtitleText = subtitleStack.querySelector(".type-text");
-
-  subtitleLive.style.setProperty("--subtitle-in", `${SUBTITLE_IN}ms`);
-  subtitleLive.style.setProperty("--subtitle-out", `${SUBTITLE_OUT}ms`);
-
-  buildSizers(
-    titleStack,
-    TITLES.map((title) => title.text),
-  );
-  buildSizers(
-    subtitleStack,
-    TITLES.flatMap((title) => title.subtitles.map((sub) => sub.text)),
-  );
-
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    titleText.textContent = TITLES[0].text;
-    subtitleText.textContent = TITLES[0].subtitles[0].text;
-    subtitleLive.classList.add("is-visible");
-    caret.remove();
-  } else {
-    run();
-  }
 
   function buildSizers(stack, texts) {
     const live = stack.querySelector(".type-live");
@@ -140,4 +135,24 @@ if (titleStack && subtitleStack) {
       subtitle = pickWeighted(title.subtitles, lastSubtitle.get(title));
     }
   }
-}
+
+  subtitleLive.style.setProperty("--subtitle-in", `${SUBTITLE_IN}ms`);
+  subtitleLive.style.setProperty("--subtitle-out", `${SUBTITLE_OUT}ms`);
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    titleText.textContent = TITLES[0].text;
+    subtitleText.textContent = TITLES[0].subtitles[0].text;
+    subtitleLive.classList.add("is-visible");
+    caret.remove();
+  } else {
+    buildSizers(
+      titleStack,
+      TITLES.map((title) => title.text),
+    );
+    buildSizers(
+      subtitleStack,
+      TITLES.flatMap((title) => title.subtitles.map((sub) => sub.text)),
+    );
+    run();
+  }
+})();
