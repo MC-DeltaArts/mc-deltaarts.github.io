@@ -5,32 +5,18 @@ const TITLES = [
     hold: 4000,
     subtitles: [
       { text: "Welcome to my portfolio", weight: 3 },
-      { text: "Hope you stay a while!", weight: 1 },
-    ],
-  },
-  {
-    text: "Delta",
-    weight: 1,
-    subtitles: [
-      { text: "Or at least that's what they call me", weight: 3 },
-      { text: "The greek delta and epsilon are optional", weight: 1 },
+      { text: "Hope you stay a while", weight: 1 },
     ],
   },
   {
     text: "An Artist",
     weight: 1,
-    subtitles: [
-      { text: "Drawing longer than I've been coding", weight: 1 },
-      { text: "Let's make some art together" },
-    ],
+    subtitles: [{ text: "Drawing longer than I've been coding", weight: 1 }],
   },
   {
     text: "A Game Designer",
     weight: 1,
-    subtitles: [
-      { text: "If I make 'em, I play 'em", weight: 1 },
-      { text: "Your vision? My pleasure" },
-    ],
+    subtitles: [{ text: "Systems first, pixels second", weight: 1 }],
   },
 ];
 
@@ -68,14 +54,6 @@ if (titleStack && subtitleStack) {
     subtitleLive.classList.add("is-visible");
     caret.remove();
   } else {
-    buildSizers(
-      titleStack,
-      TITLES.map((title) => title.text),
-    );
-    buildSizers(
-      subtitleStack,
-      TITLES.flatMap((title) => title.subtitles.map((sub) => sub.text)),
-    );
     run();
   }
 
