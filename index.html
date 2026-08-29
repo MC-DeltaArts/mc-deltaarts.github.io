@@ -7,57 +7,25 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <link rel="icon" href="assets/icons/icon-web-page.png">
-    <title>Delta Arts | Systems & Software Designer</title>
-    <meta
-      name="description"
-      content="online alias of Marco Caramazza, is a computer scientist who effortlessly combines programming and drawing into a single form of art, always seeking knew knowledge and connections in every form of entertainment, from music, to games, to comics, and movies"
-    />
-    <meta
-      name="keywords"
-      content="Portfolio, Game Dev, Unity, Systems Designer"
-    />
     <meta name="author" content="Marco Caramazza" />
+    <title>Delta Arts | Portfolio of Marco Caramazza</title>
+    <meta
+    name="description"
+    content="Delta Arts is the portfolio of Marco Caramazza, a game and systems designer and artist from Milan. Unity projects, concept art, character design and illustration."
+    />
+    <link rel="canonical" href="https://mc-deltaarts.github.io/" />
 
     <!-- Oswald font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Figtree:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet"
     />
 
-    <link href="normalize.css" rel="stylesheet" />
+    <link href="styles/normalize.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
     <link href="styles/reveal.css" rel="stylesheet" />
-
-    <link href="styles/reveal.css" rel="stylesheet" />
-
-<script>
-  (function () {
-    var box = null;
-    function log(text) {
-      if (!box) {
-        box = document.createElement("pre");
-        box.style.cssText =
-          "position:fixed;bottom:0;left:0;right:0;max-height:50%;overflow:auto;z-index:9999;margin:0;padding:1rem;background:#900;color:#fff;font-size:13px;white-space:pre-wrap";
-        document.body.appendChild(box);
-      }
-      box.textContent += text + "\n\n";
-    }
-    window.addEventListener("error", function (event) {
-      log(
-        event.message +
-          "\n@ " +
-          (event.filename || "(no file)") +
-          ":" +
-          event.lineno,
-      );
-    });
-    window.addEventListener("unhandledrejection", function (event) {
-      log("Unhandled promise: " + event.reason);
-    });
-  })();
-</script>
 
     <script src="scripts/gallery.js" defer></script>
     <script src="scripts/lightbox.js" defer></script>
@@ -67,6 +35,33 @@
     </script>
     <script src="scripts/reveal.js" defer></script>
     <script src="scripts/typewriter.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marco Caramazza",
+      "alternateName": "Delta Arts",
+      "url": "https://mc-deltaarts.github.io/",
+      "image": "https://mc-deltaarts.github.io/assets/imgs/profile-picture-about-me.webp",
+      "jobTitle": "Game and Systems Designer",
+      "description": "Game and systems designer, programmer and artist based in Milan, Italy.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Politecnico di Milano"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Milan",
+        "addressCountry": "IT"
+      },
+      "sameAs": [
+        "https://github.com/MC-DeltaArts",
+        "https://www.linkedin.com/in/marco-caramazza-41641a351",
+        "https://www.instagram.com/marco_caramazza"
+      ]
+    }
+    </script>
   </head>
 
   <body id="home">
@@ -161,7 +156,7 @@
           <!--Hivemind-->
           <li class="project-item" data-reveal>
             <article class="project-card">
-              <a href="projects/space-shooter/index.html">
+              <a href="https://docs.google.com/document/d/1o_3apkYIB43wuMBgCOw48Px_TWxMN0T1/edit?usp=sharing&ouid=103417499427225453377&rtpof=true&sd=true">
                 <div class="project-thumbnail">
                   <img
                     class="thumbnail-image"
@@ -208,7 +203,7 @@
           <!--Seats For All-->
           <li class="project-item" data-reveal>
             <article class="project-card">
-              <a href="projects/space-shooter/index.html">
+              <a href="https://docs.google.com/document/d/1__MoHCMf22mml96KcfHzZqy6DmA51okrhs_MqGrAtjw/edit?usp=sharing">
                 <div class="project-thumbnail">
                   <img
                     class="thumbnail-image"
@@ -254,8 +249,8 @@
 
           <!--Enchanted Forest-->
           <li class="project-item" data-reveal>
-            <article class="project-card hivemind-card">
-              <a href="projects/space-shooter/index.html">
+            <article class="project-card">
+              <a href="https://github.com/FrancescoTorella/EnchantedForestWanderer">
                 <div class="project-thumbnail">
                   <img
                     class="thumbnail-image"
@@ -297,8 +292,8 @@
 
           <!--CTRL-V-->
           <li class="project-item" data-reveal>
-            <article class="project-card hivemind-card">
-              <a href="projects/space-shooter/index.html">
+            <article class="project-card">
+              <a href="https://polimi-game-collective.itch.io/ctrl-v">
                 <div class="project-thumbnail">
                   <img
                     class="thumbnail-image"
@@ -1038,6 +1033,7 @@
             style="--reveal-distance: 30vw; --reveal-fade-duration: 1200ms"
             class="about-me-pic"
             src="assets/imgs/profile-picture-about-me.webp"
+            alt="A picture of Marco Caramazza"
           />
           <div
             class="about-me-description"
@@ -1127,7 +1123,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" />
                   </svg>
             </a>
-            <a data-reveal href="https://www.instagram.com/marco_caramazza?igsi=Nzg1ZDV4ZmRraHI1" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a data-reveal href="https://www.instagram.com/marco_caramazza" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"/>
                   <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"/>
