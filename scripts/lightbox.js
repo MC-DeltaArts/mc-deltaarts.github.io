@@ -7,7 +7,7 @@ const allLinks = [...document.querySelectorAll(".gallery-link")];
 let currentIndex = 0;
 
 function visibleLinks() {
-  return allLinks.filter((link) => !link.closest(".gallery-item").hidden);
+  return allLinks.filter((link) => !link.closest(".gallery-item")?.hidden);
 }
 
 function show(index) {
@@ -21,14 +21,21 @@ function show(index) {
   image.src = link.href;
   image.alt = link.dataset.description;
 
-  titleEl.textContent = link.dataset.title;
+  titleEl.textContent = link.dataset.title ?? "";
   titleEl.removeAttribute("aria-label");
-  if (link.dataset.titleSpoken !== link.dataset.title) {
+  if (
+    link.dataset.titleSpoken &&
+    link.dataset.titleSpoken !== link.dataset.title
+  ) {
     titleEl.setAttribute("aria-label", link.dataset.titleSpoken);
   }
 
-  dateEl.textContent = link.dataset.date.slice(0, 4);
-  dateEl.setAttribute("datetime", link.dataset.date);
+  dateEl.hidden = !link.dataset.date;
+
+  if (link.dataset.date) {
+    dateEl.textContent = link.dataset.date.slice(0, 4);
+    dateEl.setAttribute("datetime", link.dataset.date);
+  }
 }
 
 for (const link of allLinks) {
