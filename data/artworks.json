@@ -73,7 +73,7 @@
   },
   {
     "file": "token-atlas.webp",
-    "title": "Token - Atlas",
+    "title": "Atlas Token",
     "alt": "A round character token of Atlas, a white metal construct with a glowing blue orb.",
     "description": "A round token depicting an artificial construct made of white metal. The image centers on its midsection, where a blue orb floats surrounded by a powerful golden shine, mirrored by the glowing eyes above. The metal looks old, dirty, and rusted. A circular border of deep blue scales with golden highlights frames the piece.",
     "date": "2026-03-06",
@@ -97,9 +97,9 @@
   },
   {
     "file": "animated-protagonist-ctrlz.webp",
-    "title": "CTRL-Z Animation Cycles",
-    "titleSpoken": "Control Z Animation Cycles",
-    "alt": "Pixel animation cycles for the CTRL-Z protagonist: standing, idle, and running.",
+    "title": "CTRL-V Animation Cycles",
+    "titleSpoken": "Control V Animation Cycles",
+    "alt": "Pixel animation cycles for the CTRL-V protagonist: standing, idle, and running.",
     "description": "A simple pixelated humanoid character with a blue cap and pants and orange overalls. They are shown first standing still, then in their idle animation, and finally in their running animation.",
     "date": "2025-12-07",
     "tags": ["Pixel Art", "Characters"]
