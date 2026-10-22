@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <link rel="icon" href="../../assets/icons/icon-web-page.png" />
+    <meta name="author" content="Marco Caramazza" />
+    <title>Enchanted Forest | Delta Arts</title>
+    <meta
+      name="description"
+      content="A Vulkan 3D exploration game where you light your way through a magical forest by watering glowing plants, shrink yourself with mushrooms, and trade favours with its creatures to reach the treasure."
+    />
+    <link
+      rel="canonical"
+      href="https://mc-deltaarts.github.io/projects/enchanted-forest/"
+    />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Enchanted Forest | Delta Arts" />
+    <meta
+      property="og:description"
+      content="A Vulkan 3D exploration game where you light your way through a magical forest by watering glowing plants, shrink yourself with mushrooms, and trade favours with its creatures to reach the treasure."
+    />
+    <meta
+      property="og:url"
+      content="https://mc-deltaarts.github.io/projects/enchanted-forest/"
+    />
+    <meta
+      property="og:image"
+      content="https://mc-deltaarts.github.io/assets/imgs/project-thumbs/thumbnail-enchanted-forest.webp"
+    />
+
+    <!-- Oswald font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="../../styles/normalize.css" rel="stylesheet" />
+    <link href="../../styles/styles.css" rel="stylesheet" />
+    <link href="../../styles/reveal.css" rel="stylesheet" />
+    <link href="../../styles/project.css" rel="stylesheet" />
+
+    <script src="../../scripts/navbar.js" defer></script>
+    <script src="../../scripts/carousel.js" defer></script>
+    <script src="../../scripts/lightbox.js" defer></script>
+    <script>
+      document.documentElement.classList.add("js-reveal");
+    </script>
+    <script src="../../scripts/reveal.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Enchanted Forest Wanderer",
+        "url": "https://mc-deltaarts.github.io/projects/enchanted-forest/",
+        "image": "https://mc-deltaarts.github.io/assets/imgs/project-thumbs/thumbnail-enchanted-forest.webp",
+        "description": "A Vulkan 3D exploration game where you light your way through a magical forest by watering glowing plants, shrink yourself with mushrooms, and trade favours with its creatures to reach the treasure.",
+        "datePublished": "2026-06",
+        "genre": ["Adventure", "Exploration"],
+        "gamePlatform": "PC",
+        "author": {
+          "@type": "Person",
+          "name": "Marco Caramazza",
+          "url": "https://mc-deltaarts.github.io/"
+        }
+      }
+    </script>
+  </head>
+
+  <body class="project-page">
+    <header class="site-header">
+      <nav class="nav-bar">
+        <a class="home-link" href="../../index.html"
+          ><span class="home-title">Delta Arts</span>
+          <span class="home-subtitle">Systems &amp; Software Designer</span></a
+        >
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Menu"
+        >
+          <span class="nav-toggle-bars"></span>
+        </button>
+        <ul id="nav-menu" hidden>
+          <li>
+            <a class="nav-link" href="../../index.html#projects"> Projects </a>
+          </li>
+          <li>
+            <a class="nav-link" href="../../index.html#artworks"> Artworks </a>
+          </li>
+          <li><a class="nav-link" href="../../index.html#about"> About </a></li>
+          <li>
+            <a class="nav-link" href="../../index.html#contact"> Contact </a>
+          </li>
+          <li>
+            <a
+              class="nav-link resume-link"
+              href="../../assets/pdfs/CV_Marco_Caramazza.pdf"
+              download
+            >
+              <svg
+                class="resume-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.5 3H12H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H7.5M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V9.75V12V19C19 20.1046 18.1046 21 17 21H16.5"
+                />
+                <path d="M12 12V20M12 20L9.5 17.5M12 20L14.5 17.5" />
+              </svg>
+              Resume
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <dialog class="lightbox" aria-label="Screenshot viewer">
+      <button class="lightbox-close" aria-label="Close viewer">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous screenshot">
+        &lsaquo;
+      </button>
+      <button class="lightbox-next" aria-label="Next screenshot">
+        &rsaquo;
+      </button>
+
+      <figure class="lightbox-figure">
+        <img class="lightbox-image" src="" alt="" />
+        <figcaption class="lightbox-caption">
+          <span class="lightbox-title"></span>
+          <time class="lightbox-date"></time>
+        </figcaption>
+      </figure>
+    </dialog>
+
+    <main>
+      <div class="project-hero">
+        <img
+          class="project-hero-image"
+          src="../../assets/imgs/project-thumbs/thumbnail-enchanted-forest.webp"
+          alt=""
+        />
+      </div>
+
+      <article class="project-body">
+        <a class="back-link" href="../../index.html#projects">
+          <span aria-hidden="true">&larr;</span> Back to projects
+        </a>
+
+        <header class="project-header" data-reveal="blur">
+          <p class="project-meta">
+            <time datetime="2026-03">MARCH to JUNE 2026</time>
+            <span class="badge content-badge">
+              <img
+                class="badge-icon"
+                src="../../assets/logos/vulkan.svg"
+                alt=""
+              />
+              Vulkan
+            </span>
+          </p>
+
+          <h1 class="project-title">Enchanted Forest</h1>
+
+          <p class="project-tagline">A stroll through the forest</p>
+
+          <ul role="list" class="tag-list">
+            <li class="tag">Computer Graphics</li>
+            <li class="tag">3D Modeling</li>
+            <li class="tag">Exploration</li>
+            <li class="tag">Singleplayer</li>
+            <li class="tag">C++</li>
+            <li class="tag">Shaders</li>
+          </ul>
+        </header>
+
+        <div class="project-links" data-reveal-stagger>
+          <a
+            data-reveal
+            href="https://github.com/FrancescoTorella/EnchantedForestWanderer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z"
+              />
+            </svg>
+            <p>Check out on Github</p>
+          </a>
+        </div>
+
+        <dl class="project-facts" data-reveal>
+          <div>
+            <dt>Role</dt>
+            <dd>Programmer, Texture Artist</dd>
+          </div>
+          <div>
+            <dt>Team</dt>
+            <dd>3 Developers</dd>
+          </div>
+          <div>
+            <dt>Duration</dt>
+            <dd>3 Months</dd>
+          </div>
+          <div>
+            <dt>Engine</dt>
+            <dd>Vulkan, C++</dd>
+          </div>
+        </dl>
+
+        <section class="project-section" data-reveal>
+          <h2>Gallery</h2>
+
+          <div class="media-gallery">
+            <div class="media-strip">
+              <ul role="list" class="media-track">
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/enchanted-forest/forest.webp"
+                    data-title="Into the forest"
+                    data-description="The forest at night, with the player standing on a trail between the trees."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/enchanted-forest/thumbs/800-forest.webp"
+                      alt="The forest at night."
+                      width="800"
+                      height="450"
+                    />
+                  </a>
+                </li>
+
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/enchanted-forest/unicorn.webp"
+                    data-title="The unicorn"
+                    data-description="The player stands in front of the unicorn holding a herb, with the prompt to feed it on screen."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/enchanted-forest/thumbs/800-unicorn.webp"
+                      alt="The unicorn being fed a herb."
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/enchanted-forest/rabbit.webp"
+                    data-title="The rabbit"
+                    data-description="The player offers a carrot to the rabbit."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/enchanted-forest/thumbs/800-rabbit.webp"
+                      alt="The rabbit being fed a carrot."
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/enchanted-forest/cave.webp"
+                    data-title="The spider"
+                    data-description="The player is blocked by the spider."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/enchanted-forest/thumbs/800-cave.webp"
+                      alt="The spider blocking the player."
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/enchanted-forest/treasure.webp"
+                    data-title="The treasure"
+                    data-description="The glowing treasure chest sitting at the back of the grotto, at the end of the adventure."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/enchanted-forest/thumbs/800-treasure.webp"
+                      alt="The treasure chest inside the grotto."
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>Overview</h2>
+          <p>
+            Enchanted Forest Wanderer is a first person exploration game built
+            entirely in <b>Vulkan</b>, where you get dropped into a forest in
+            the middle of the night and have to light your own way through it.
+            Water the glowing plants to push the dark back, eat the mushrooms
+            scattered around to shrink yourself small enough to fit where you
+            normally couldn't, and do favours for the creatures living in the
+            woods until the cave in the mountainside finally lets you in to grab
+            the treasure!
+          </p>
+          <p>
+            This one was made for the <b>Computer Graphics</b> course, which
+            meant no engine, no editor, and nothing on screen that we hadn't put
+            there ourselves, so every tree, every light and every single letter
+            of text had to go through the graphics API by hand. I came in as a
+            programmer and ended up fixing a lot of the <b>3D models</b> and
+            <b>textures</b> too, since I wanted to create a cohesive visual
+            style putting together many different sources.
+          </p>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>Lighting the Forest</h2>
+          <p>
+            The forest starts off almost pitch black, and the only way to see
+            anything at all is to spend the water you're carrying on the big
+            glowing plants growing between the trees. Every time you water one,
+            its <b>emissive texture</b> gets multiplied up a step and a
+            <b>point light</b> gets stuck to it and it starts throwing coloured
+            light onto the trunks and the ground around it.
+          </p>
+          <p>
+            This wouldn't have been an issue, if not for the fact that the
+            shader can only hold
+            <b>sixteen lights at once before it impacts performance</b>, and
+            you'll walk past far more than sixteen plants in a single run. I
+            could have just capped how many you're allowed to light, but I
+            couldn't have predicted which lights would be used by the player,
+            and I couldn't risk leaving them in the dark, so I treated the light
+            array as a queue instead, meaning the second it fills up, the oldest
+            plant quietly loses its light and gets its original texture back.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/enchanted-forest/plants.webp"
+              alt="A lit plant casting coloured light onto the trees around it."
+              width="1600"
+              height="900"
+              loading="lazy"
+            />
+            <figcaption>
+              A watered plant lighting up its surroundings.
+            </figcaption>
+          </figure>
+
+          <p>
+            Sitting on top of every lit plant is a swarm of <b>fireflies</b>, a
+            pool of up to 256 little billboarded motes that get handed out to
+            whichever plants happen to be glowing at that moment. They're spread
+            around the plant using the <b>golden ratio</b> and each one drifts
+            on its own offset and blinks on its own timing so they never pulse
+            all together, and the whole swarm gets brighter the more you've
+            watered the plant. Not one of them is a real light, since they're
+            there purely to make a lit plant feel alive.
+          </p>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>A Chain of Favours</h2>
+          <p>
+            Finding the treasure was never going to be the hard part, since the
+            cave it's sitting in is blocked off by a <b>tarantula</b> who's made
+            herself comfortable right in the doorway, and getting rid of her
+            means going through every other creature in the forest first. You
+            pick a herb and feed it to the <b>unicorn</b>, who gives you a
+            carrot, you feed the carrot to the <b>rabbit</b>, who gives you a
+            poisonous potato, which is just the thing you need to get of that
+            annoying arachnid.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/enchanted-forest/cave.webp"
+              alt="The treasure inside a cave is blocked by a giant spider."
+              width="1600"
+              height="900"
+              loading="lazy"
+            />
+            <figcaption>Our treasure is blocked off!</figcaption>
+          </figure>
+
+          <p>
+            Actually knowing where to go is handled by the <b>trails</b> cut
+            through the forest, which live in the code as four lists of
+            coordinates, one for every leg of the quest: spawn to the unicorn,
+            unicorn to the rabbit, spawn to the rabbit for anyone who stumbles
+            onto him first, and rabbit to the spider. Every node in those lists
+            is nothing more than an x, a z and a <b>half width</b> saying how
+            wide the trail ought to be at that exact spot, which lets a path
+            swell out into a clearing and narrow back down to a track without
+            anyone having to model a single thing.
+          </p>
+          <p>
+            Those nodes then get run through a <b>Catmull-Rom spline</b>, which
+            passes through every waypoint, rounding the corners into something
+            that looks walked. When the world generation asks whether a spot
+            sits on a trail it gets back the distance to the closest lane along
+            with that lane's half width right there, and anywhere the answer
+            comes back yes, no tree, plant, herb or mushroom is allowed to
+            spawn, which is the whole reason the trails stay walkable. The
+            terrain texture reads from the same network and feathers the dirt
+            into the grass over a couple of units at the edges, so the paths
+            come out looking worn in rather than painted on.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/enchanted-forest/herb.webp"
+              alt="The player picking a herb from the forest floor."
+              width="1600"
+              height="900"
+              loading="lazy"
+            />
+            <figcaption>Picking up a herb along the trail.</figcaption>
+          </figure>
+
+          <p>
+            Playing with the field of view and height of the player was part of
+            the plan from the very beginning, so the idea was to put a rabbit in
+            a burrow under the mountain that you could only reach if you ate a
+            <b>mushroom</b> and shrunk yourself down first. Actually getting you
+            down there was the troublesome part, because the terrain is a
+            <b>heightmap</b>, and a heightmap only ever knows one height for any
+            point on the map, meaning there is simply no way to have ground
+            above your head. I could have layered a second surface underneath
+            the first and then taught the collision, the texturing and the world
+            generation which of the two they were standing on, but that's an
+            awful lot of work to pour into one burrow with a rabbit sitting in
+            it.
+          </p>
+          <p>
+            So, the game cheats! The archway is really just a
+            <b>trigger disc</b> that drops you into a burrow buried five hundred
+            units below the forest where nothing else lives, built at a scale
+            that matches how small you are by the time you get there, and
+            stepping back onto the pad you spawned on sends you straight back
+            out beside the archway. The only real headache was the triggers
+            firing the instant they caught you, which kept bouncing the player
+            back through the door they'd just walked through, so each end of the
+            portal got an <b>armed flag</b> that only resets once you've stepped
+            off of it.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/enchanted-forest/rabbit-burrow.webp"
+              alt="The portal that leads to the rabbit's burrow."
+              width="1600"
+              height="900"
+              loading="lazy"
+            />
+            <figcaption>The rabbit's burrow.</figcaption>
+          </figure>
+
+          <p>
+            The tarantula is a different problem altogether, since she isn't
+            hiding anything underground, she's just made herself comfortable in
+            the mouth of a cave carved into the mountainside. That cave is a
+            hollow ring of rock with one gap cut into it, and whether you're
+            allowed through comes down to an <b>angular check</b> against the
+            direction the doorway is facing, which meant that sealing it shut
+            while she was still alive was as easy as flipping a boolean and
+            letting the whole ring go solid.
+          </p>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>Growing a Forest</h2>
+          <p>
+            Not a single tree in that forest was placed by hand. They get laid
+            out on a grid with a random offset shoving each one off its own cell
+            so the rows never actually read as rows, and then every spot has to
+            survive a whole list of checks before anything is allowed to spawn
+            there: it can't sit below the <b>water line</b> or above the
+            <b>rock line</b>, it can't sit on a slope steep enough that the
+            trunk would end up floating in the air, and it can't sit on any of
+            the <b>trails</b> running through the forest, which get queried from
+            a shared path network that the grass and the terrain texture read
+            from as well.
+          </p>
+          <p>
+            The plants, herbs and mushrooms then get scattered around each tree
+            using those same offsets mirrored, which keeps them clustered close
+            to the trees without ever letting one grow inside a trunk. The
+            forest is also split into three <b>colour biomes</b> by a couple of
+            diagonal lines drawn across the world, so the plants you come across
+            shift from pink to yellow to blue depending on which wedge of the
+            map you've wandered into. And the map model itself from which I read
+            the heightmap was obtained using a Blender plugin to generate
+            terrains, which I then modeled with sculpting tools.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/enchanted-forest/biomes.webp"
+              alt="Plants of a different colour marking a different area of the forest, seen from above."
+              width="1600"
+              height="900"
+              loading="lazy"
+            />
+            <figcaption>The three biomes</figcaption>
+          </figure>
+        </section>
+
+        <a class="back-link" href="../../index.html#projects">
+          <span aria-hidden="true">&larr;</span> Back to projects
+        </a>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        © 2026 Marco Caramazza · This website is entirely homemade · All rights
+        reserved
+      </p>
+    </footer>
+  </body>
+</html>

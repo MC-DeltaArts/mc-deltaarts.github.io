@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <link rel="icon" href="../../assets/icons/icon-web-page.png" />
+    <meta name="author" content="Marco Caramazza" />
+    <title>Hivemind | Delta Arts</title>
+    <meta
+      name="description"
+      content="A bee colony life sim where up to four players merge their hives into one shared honeycomb. First place in the Multiplayer category at New Game Design 2026."
+    />
+    <link
+      rel="canonical"
+      href="https://mc-deltaarts.github.io/projects/hivemind/"
+    />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Hivemind | Delta Arts" />
+    <meta
+      property="og:description"
+      content="A bee colony life sim where up to four players merge their hives into one shared honeycomb. First place in the Multiplayer category at New Game Design 2026."
+    />
+    <meta
+      property="og:url"
+      content="https://mc-deltaarts.github.io/projects/hivemind/"
+    />
+    <meta
+      property="og:image"
+      content="https://mc-deltaarts.github.io/assets/imgs/project-thumbs/thumbnail-hivemind.webp"
+    />
+
+    <!-- Oswald font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="../../styles/normalize.css" rel="stylesheet" />
+    <link href="../../styles/styles.css" rel="stylesheet" />
+    <link href="../../styles/reveal.css" rel="stylesheet" />
+    <link href="../../styles/project.css" rel="stylesheet" />
+
+    <script src="../../scripts/navbar.js" defer></script>
+    <script src="../../scripts/carousel.js" defer></script>
+    <script src="../../scripts/lightbox.js" defer></script>
+    <script>
+      document.documentElement.classList.add("js-reveal");
+    </script>
+    <script src="../../scripts/reveal.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Hivemind",
+        "url": "https://mc-deltaarts.github.io/projects/hivemind/",
+        "image": "https://mc-deltaarts.github.io/assets/imgs/project-thumbs/thumbnail-hivemind.webp",
+        "description": "A bee colony life sim where up to four players merge their hives into one shared honeycomb. First place in the Multiplayer category at New Game Design 2026.",
+        "datePublished": "2026-03",
+        "genre": ["Simulation", "Management"],
+        "gamePlatform": "PC",
+        "author": {
+          "@type": "Person",
+          "name": "Marco Caramazza",
+          "url": "https://mc-deltaarts.github.io/"
+        },
+        "award": "1st place, Multiplayer category, New Game Design 2026"
+      }
+    </script>
+  </head>
+
+  <body class="project-page">
+    <header class="site-header">
+      <nav class="nav-bar">
+        <a class="home-link" href="../../index.html"
+          ><span class="home-title">Delta Arts</span>
+          <span class="home-subtitle">Systems &amp; Software Designer</span></a
+        >
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Menu"
+        >
+          <span class="nav-toggle-bars"></span>
+        </button>
+        <ul id="nav-menu" hidden>
+          <li>
+            <a class="nav-link" href="../../index.html#projects"> Projects </a>
+          </li>
+          <li>
+            <a class="nav-link" href="../../index.html#artworks"> Artworks </a>
+          </li>
+          <li><a class="nav-link" href="../../index.html#about"> About </a></li>
+          <li>
+            <a class="nav-link" href="../../index.html#contact"> Contact </a>
+          </li>
+          <li>
+            <a
+              class="nav-link resume-link"
+              href="../../assets/pdfs/CV_Marco_Caramazza.pdf"
+              download
+            >
+              <svg
+                class="resume-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.5 3H12H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H7.5M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V9.75V12V19C19 20.1046 18.1046 21 17 21H16.5"
+                />
+                <path d="M12 12V20M12 20L9.5 17.5M12 20L14.5 17.5" />
+              </svg>
+              Resume
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <dialog class="lightbox" aria-label="Screenshot viewer">
+      <button class="lightbox-close" aria-label="Close viewer">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous screenshot">
+        &lsaquo;
+      </button>
+      <button class="lightbox-next" aria-label="Next screenshot">
+        &rsaquo;
+      </button>
+
+      <figure class="lightbox-figure">
+        <img class="lightbox-image" src="" alt="" />
+        <figcaption class="lightbox-caption">
+          <span class="lightbox-title"></span>
+          <time class="lightbox-date"></time>
+        </figcaption>
+      </figure>
+    </dialog>
+
+    <main>
+      <div class="project-hero">
+        <img
+          class="project-hero-image"
+          src="../../assets/imgs/project-thumbs/thumbnail-hivemind.webp"
+          alt=""
+        />
+      </div>
+
+      <article class="project-body">
+        <a class="back-link" href="../../index.html#projects">
+          <span aria-hidden="true">&larr;</span> Back to projects
+        </a>
+
+        <header class="project-header" data-reveal="blur">
+          <p class="project-meta">
+            <time datetime="2026-03">MARCH to JULY 2026</time>
+            <span class="badge content-badge">
+              <img
+                class="badge-icon"
+                src="../../assets/logos/unity.svg"
+                alt=""
+              />
+              Unity
+            </span>
+            <span class="badge content-badge badge-playable">
+              1st Place, New Game Design 2026
+            </span>
+          </p>
+
+          <h1 class="project-title">Hivemind</h1>
+
+          <p class="project-tagline">
+            Build, Expand, Evolve, and make some Honey!
+          </p>
+
+          <ul role="list" class="tag-list">
+            <li class="tag">Artificial Life</li>
+            <li class="tag">Colony Sim</li>
+            <li class="tag">Multiplayer</li>
+            <li class="tag">Systems Design</li>
+            <li class="tag">2D Pixel-Art</li>
+            <li class="tag">Management</li>
+            <li class="tag">Breeding</li>
+            <li class="tag">Unity</li>
+          </ul>
+        </header>
+
+        <div class="project-links" data-reveal-stagger>
+          <a
+            data-reveal
+            href="../../assets/pdfs/Hivemind_GDD.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.5 3H12H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V8.625M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19"
+              />
+              <path d="M8.5 12.5H15.5M8.5 16H13" />
+            </svg>
+            <p>Read the GDD</p>
+          </a>
+          <a
+            data-reveal
+            href="../../assets/pdfs/Hivemind_TDD.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.5 3H12H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V8.625M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19"
+              />
+              <path d="M8.5 12.5H15.5M8.5 16H13" />
+            </svg>
+            <p>Read the TDD</p>
+          </a>
+          <a
+            data-reveal
+            href="../../assets/pdfs/Hivemind_Pitch_Deck.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 4H21M4 4V14C4 15.1046 4.89543 16 6 16H18C19.1046 16 20 15.1046 20 14V4"
+              />
+              <path d="M12 16V20M12 20L9 22M12 20L15 22" />
+            </svg>
+            <p>See the pitch</p>
+          </a>
+          <a
+            data-reveal
+            href="https://github.com/SteveOrDan/Hivemind"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z"
+              />
+            </svg>
+            <p>Check out on Github</p>
+          </a>
+          <a
+            data-reveal
+            href="https://lastatalenews.unimi.it/new-game-design-2026-premiati-inventori-videogiochi-statale-politecnico"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 3H16V9C16 11.2091 14.2091 13 12 13C9.79086 13 8 11.2091 8 9V3Z"
+              />
+              <path
+                d="M8 5H5V6.5C5 8.15685 6.34315 9.5 8 9.5M16 5H19V6.5C19 8.15685 17.6569 9.5 16 9.5"
+              />
+              <path d="M12 13V17M9 21H15L14 17H10L9 21Z" />
+            </svg>
+            <p>See the results!</p>
+          </a>
+        </div>
+
+        <dl class="project-facts" data-reveal>
+          <div>
+            <dt>Role</dt>
+            <dd>Systems Designer, Lead Artist</dd>
+          </div>
+          <div>
+            <dt>Team</dt>
+            <dd>3 Developers, 2 Artists</dd>
+          </div>
+          <div>
+            <dt>Duration</dt>
+            <dd>5 Months</dd>
+          </div>
+          <div>
+            <dt>Engine</dt>
+            <dd>Unity</dd>
+          </div>
+        </dl>
+
+        <section class="project-section" data-reveal>
+          <h2>Gallery</h2>
+
+          <div class="media-gallery">
+            <div class="media-strip">
+              <ul role="list" class="media-track">
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/hivemind/merge.webp"
+                    data-title="Hives merged"
+                    data-description="Two players' hives joined into a single honeycomb, each player's rooms tinted in their own colour, with bees from both colonies working side by side."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/hivemind/thumbs/800-merge.webp"
+                      alt="Two players' hives joined into one honeycomb, each tinted in its own colour."
+                      width="800"
+                      height="450"
+                    />
+                  </a>
+                </li>
+
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/hivemind/hive.webp"
+                    data-title="Life in the hive"
+                    data-description="Bees going about their day around the hive, eating, sleeping, working at the benches and breeding."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/hivemind/thumbs/800-hive.webp"
+                      alt="Bees eating, sleeping and working around the hive."
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/hivemind/editing.webp"
+                    data-title="Building the hive"
+                    data-description="Cell edit mode, with the pending cells marked out before the changes are committed."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/hivemind/thumbs/800-editing.webp"
+                      alt="Cell edit mode with pending cells marked out."
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/hivemind/bee-panel.webp"
+                    data-title="A bee up close"
+                    data-description="Selecting a bee shows which species each of its three parts comes from, along with all ten of its traits."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/hivemind/thumbs/800-bee-panel.webp"
+                      alt="A selected bee's panel with its three parts and ten traits."
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+
+                <li class="media-item">
+                  <a
+                    class="media-link gallery-link"
+                    href="../../assets/imgs/project-imgs/hivemind/hornet.webp"
+                    data-title="The Giant Hornet"
+                    data-description="The Giant Hornet attacking a nursery while the whole colony swarms it and its health bar slowly drains."
+                  >
+                    <img
+                      src="../../assets/imgs/project-imgs/hivemind/thumbs/800-hornet.webp"
+                      alt="The Giant Hornet attacking a nursery, surrounded by bees."
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>Trailer</h2>
+
+          <figure class="project-figure">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/gJXYA_IkmYQ"
+              title="Hivemind announcement trailer"
+              allow="
+                accelerometer;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+            <figcaption>
+              The announcement trailer presented at New Game Design 2026.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>Overview</h2>
+          <p>
+            Hivemind is an artificial life simulation where you look after a
+            colony of bees living inside a hollow tree trunk, growing their home
+            hexagon by hexagon, breeding new generations and keeping everyone
+            fed and alive through the seasons and whatever the outside world
+            throws at them. The idea the whole game is built around is that up
+            to four players can <b>merge their colonies</b> into a single hive
+            and run it together.
+          </p>
+          <p>
+            It was made for the <b>Online Game Design</b> course by Tri-Side
+            Die, a team of three, with pixel art by Suraiya Langroodi Warren and
+            bee concepts by Elena Miles, and in July it took
+            <b>first place in the Multiplayer category</b> at New Game Design
+            2026, judged by twenty-one professionals from twelve companies in
+            the industry. As systems designer and lead artist I designed the
+            breeding mathematics, the ten species and their traits, the
+            creatures that threaten the hive and the events that bring them in,
+            and I painted the concept art for the creatures, the mutations and
+            the events, and made the trailer too.
+          </p>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>One hive, Many players</h2>
+          <p>
+            Colony sims have had co-op for years, but it almost always means
+            walking around a world that belongs to somebody else. In Hivemind,
+            when a friend joins you their hive is
+            <b>fused onto yours</b> along the longest wall the two hives share,
+            their bees start working in your rooms and every resource in storage
+            becomes everyone's, so from that moment on there is one colony and
+            the people running it.
+          </p>
+          <p>
+            What makes it more than building together is that the bees keep
+            living and breeding on their own once the hives are joined, so a
+            friend's carpenters start passing their genes into your nurseries
+            and your cuckoos into theirs, and after a few generations the colony
+            is full of mixes neither of you could have bred alone. Each player
+            still keeps their own queen, told apart by the crown she wears, and
+            since she can never die and her starting nursery can never be
+            destroyed, everyone always has a way back from a disaster.
+          </p>
+          <p>
+            Everyone in the session also lives on the host's timeline, so the
+            events coming for the hive come for all of you, and they scale with
+            the number of players so that a full lobby can't trivialize them.
+            Going back to your own world restores your timeline to where you
+            left it, and that makes joining a friend a real strategy, since you
+            can put off an event you aren't ready for, or invite friends over to
+            breed in the species you're missing before it arrives.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/hivemind/merged-hive.webp"
+              alt="Several players' hives merged into one large honeycomb, each tinted in its own colour."
+              width="1600"
+              height="900"
+              loading="lazy"
+            />
+            <figcaption>
+              Several colonies grown into one, each player's rooms keeping their
+              colour.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>Breeding, and the Maths behind it</h2>
+          <p>
+            Every bee is made of three parts, a head, a body and a stinger, and
+            each part belongs to a species, so a bee with all three from the
+            same species is a pure bee while one with a bumble head on a
+            carpenter body and stinger is 33.33% bumble and 66.67% carpenter.
+            The queen lays eggs that start life as 100% honey bee, and from then
+            on every bee that fertilizes an egg adds its own makeup to the larva
+            with a weight of one over the number of contributors so far, the egg
+            included.
+          </p>
+          <p>
+            With pure bees it stays simple, one bumble on a fresh egg gives a
+            50/50 larva and a carpenter joining in makes it an even three way
+            split, but once the bees doing the fertilizing are mixed themselves
+            their percentages get diluted by the same fraction, so a bee that is
+            a third digger contributing to a fifth of a larva only passes on
+            6.67% digger. After enough bees have had a go the larva can be
+            holding six or seven species at awkward percentages, and when it
+            hatches the game normalizes everything over 100 and rolls the head,
+            the body and the stinger <b>independently</b> against that
+            distribution. That independent roll is where the surprises come
+            from, since a larva that is mostly bumble can still hatch with a
+            digger stinger and a mutated head.
+          </p>
+
+          <div class="figure-row">
+            <figure class="project-figure">
+              <img
+                src="../../assets/imgs/project-imgs/hivemind/sprite-bumble-honey-head.webp"
+                alt="A pixel art bumble bee with a honey bee's head."
+                width="750"
+                height="750"
+                loading="lazy"
+              />
+              <figcaption>
+                A bumble bee with a honey bee head. Pixel art by Suraiya
+                Langroodi Warren.
+              </figcaption>
+            </figure>
+
+            <figure class="project-figure">
+              <img
+                src="../../assets/imgs/project-imgs/hivemind/sprite-honey-bumble-head.webp"
+                alt="A pixel art honey bee with a bumble bee's head."
+                width="750"
+                height="750"
+                loading="lazy"
+              />
+              <figcaption>
+                A honey bee with a bumble bee head. Pixel art by Suraiya
+                Langroodi Warren.
+              </figcaption>
+            </figure>
+          </div>
+
+          <p>
+            A lot of the rules around it exist to stop players from min-maxing
+            their way to a perfect hive, so eggs always start as honey bees to
+            keep some common blood in the mix, a bee that has fertilized a larva
+            has to wait a full day before doing it again, and bees will wander
+            over and fertilize larvae on their own depending on their
+            <b>Sweetness</b> whether you wanted them to or not. Having only
+            partial control over who breeds with whom felt right for an
+            artificial life game.
+          </p>
+          <p>
+            The prototype runs a simplified version of this, where the larva
+            pools every part its fertilizers pass on, and selecting one shows
+            the share of each species it's carrying and how long it has left
+            before it hatches.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/hivemind/larva-genes.webp"
+              alt="A selected larva's panel listing each species in its genes with its percentage."
+              width="1600"
+              height="900"
+              loading="lazy"
+            />
+            <figcaption>
+              A larva's genes, as the prototype shows them.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>Ten species</h2>
+          <p>
+            Every bee carries ten traits, from Life Span, Hunger and Speed
+            through to Aggression, Sweetness and Luck, each starting from a base
+            value with a random modifier on top so that no two bees come out
+            quite the same. The species sit above that, and I designed all ten
+            around their real counterparts so that each one has a genuine reason
+            to be in your hive and a genuine reason to regret it. To push
+            players towards mixing their lines, parts from the same species
+            don't stack, so a bee with two bumble parts only gets the bumble
+            modifiers once.
+          </p>
+          <p>
+            Bumble bees, for example, move slowly and grow so big you'll never
+            lose track of one, and they gather far more than anyone else so
+            they're the bee to lean on during calm stretches. Cuckoos are meant
+            to feel like parasites instead, helpful to populate the hive quickly
+            with their Sweetness maxed out but lower overall stats, so they
+            breed relentlessly and are very hard to get out of a hive once
+            you've let them in.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/hivemind/concept-species.webp"
+              alt="Concept lineup of all ten bee species, each labelled with its name."
+              width="1410"
+              height="1007"
+              loading="lazy"
+            />
+            <figcaption>The ten species, concepts by Elena Miles.</figcaption>
+          </figure>
+
+          <p>
+            <b>Mutations</b> sit above all of it as rare single parts that can
+            override a species outright, like the Angler head that means the bee
+            never sleeps again, the Tanky body that never needs to eat but slows
+            the bee to a crawl, or the Double Stinger that maxes Aggression and
+            doubles it while cutting the bee's remaining life in half. A few of
+            them tie straight into the events, so an Infrared head lets a
+            soldier spot a Wax Moth the moment it gets in, and a Lavalamp body
+            keeps its bee warm through the winter storms.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/hivemind/concept-mutations.webp"
+              alt="Painted concepts of four mutated bees, one with a turtle shell body, one with a glowing lure on its head and one with a double stinger."
+              width="1097"
+              height="757"
+              loading="lazy"
+            />
+            <figcaption>
+              From left to right, the Tanky Body, the Placeholder Head, the
+              Angler Head and the Double Stinger.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="project-section" data-reveal>
+          <h2>Events Inside and Outside the Hive</h2>
+          <p>
+            I designed the event system around the timeline at the top of the
+            screen. Every day the game decides whether something should happen
+            to the hive, and whatever it picks appears a few days ahead so you
+            can see it coming and build for it. Each season brings its own
+            trouble, such as summer heat waves setting cells alight, autumn rain
+            cracking the walls and flooding the lower rooms, and winter storms
+            that freeze the entrance shut. Once an event has been dealt with the
+            hive gets a few quiet days before the next one, so the pressure
+            never stacks into something unfair.
+          </p>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/imgs/project-imgs/hivemind/event-rain.webp"
+              alt="A bee flying through heavy rain between two tree trunks, with a hare sheltering below."
+              width="1475"
+              height="801"
+              loading="lazy"
+            />
+            <figcaption>The flood approaches the hive.</figcaption>
+          </figure>
+          <p>
+            Bees out foraging get events of their own, which borrow straight
+            from tabletop games: you read what your bee has run into, pick one
+            of three ways out that each lean on a different trait, and the game
+            rolls against a hidden difficulty with that trait added on top. A
+            bee's <b>Luck</b> decides which events it can be targeted by in the
+            first place, so an unlucky bee walks into harder situations than a
+            lucky one, and the outcomes range from losing the bee and everything
+            it carried to bringing home a mutation or a bee of a species your
+            hive has never seen.
+          </p>
+
+          <div class="figure-row">
+            <figure class="project-figure">
+              <img
+                src="../../assets/imgs/project-imgs/hivemind/event-splash.webp"
+                alt="A small bee caught between a spider, a wasp and an ant in the tall grass."
+                width="1337"
+                height="820"
+                loading="lazy"
+              />
+              <figcaption>A forager surrounded by predators.</figcaption>
+            </figure>
+
+            <figure class="project-figure">
+              <img
+                src="../../assets/imgs/project-imgs/hivemind/event-layout.webp"
+                alt="A sketched foraging event with a box for the flavour text, three choices each marked with a trait icon and value, and a painted illustration."
+                width="909"
+                height="516"
+                loading="lazy"
+              />
+              <figcaption>
+                An early layout for a foraging event, with the three choices and
+                the trait each one rolls on.
+              </figcaption>
+            </figure>
+          </div>
+
+          <p>
+            Of everything that can come for a hive, the <b>Giant Hornet</b> and
+            the <b>Wax Moth</b> are the two I took furthest, and they're built
+            as opposites. The hornet is announced well in advance, flies in from
+            whichever side is closest to a nursery and kills a larva with every
+            strike until the nurseries are empty or your bees have worn it down,
+            which makes the layout of the hive the real fight, since spreading
+            the nurseries out guarantees you lose one while clustering them bets
+            on your soldiers getting there first, and some players keep an empty
+            nursery around just as a decoy.
+          </p>
+          <p>
+            The Wax Moth never announces itself at all. It slips in somewhere in
+            the hive and quietly eats into your honey, and since it doesn't
+            rouse your soldiers the way the hornet does, nobody deals with it
+            until you spot it yourself and point at it. Unlike the hornet, it's
+            the big, established hives it hurts most, since they make enough
+            honey to hide the loss for a very long time, and honey suddenly
+            coming in slower or the timeline going strangely quiet are the clues
+            attentive players learn to read.
+          </p>
+
+          <div class="figure-row">
+            <figure class="project-figure">
+              <img
+                src="../../assets/imgs/project-imgs/hivemind/concept-hornet.webp"
+                alt="Painted concept of the Giant Hornet swarmed by bees, with its health bar above it."
+                width="910"
+                height="781"
+                loading="lazy"
+              />
+              <figcaption>Concept art of the Giant Hornet.</figcaption>
+            </figure>
+
+            <figure class="project-figure">
+              <img
+                src="../../assets/imgs/project-imgs/hivemind/concept-moth.webp"
+                alt="Painted concept of the Wax Moth among golden bees."
+                width="867"
+                height="908"
+                loading="lazy"
+              />
+              <figcaption>Concept art of the Wax Moth.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <a class="back-link" href="../../index.html#projects">
+          <span aria-hidden="true">&larr;</span> Back to projects
+        </a>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        © 2026 Marco Caramazza · This website is entirely homemade · All rights
+        reserved
+      </p>
+    </footer>
+  </body>
+</html>

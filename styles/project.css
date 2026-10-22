@@ -162,7 +162,8 @@
 }
 
 .project-figure img,
-.project-figure video {
+.project-figure video,
+.project-figure iframe {
   width: 100%;
   height: auto;
   display: block;
@@ -171,11 +172,22 @@
   background-color: #0d0d0d;
 }
 
+.project-figure iframe {
+  aspect-ratio: 16/9;
+}
+
 .project-figure figcaption {
   color: #888;
   font-size: 0.9rem;
   margin-top: 0.75rem;
   text-align: center;
+}
+
+.project-figure-tall img {
+  width: auto;
+  max-width: 100%;
+  max-height: min(70vh, 600px);
+  margin: 0 auto;
 }
 
 .figure-row {
@@ -276,17 +288,18 @@
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: left;
   gap: 1.5rem;
-  margin-top: 2.5rem;
+  margin: 2rem 0 0;
 }
 
 .project-links a {
   text-decoration: none;
   display: grid;
   place-items: center;
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   color: var(--white);
   background-color: transparent;
@@ -298,12 +311,14 @@
 .project-links a p {
   text-align: center;
   transition: color 0.25s ease-out;
-  font-style: italic;
+
+  font-size: 0.95rem;
+  margin: 0;
 }
 
 .project-links svg {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 @media (hover: hover) {

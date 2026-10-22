@@ -1,27 +1,26 @@
 import sharp from "sharp";
 import { readdir, mkdir, access } from "node:fs/promises";
 
-const WIDTHS = [400, 800, 1600];
 const PROJECTS = "assets/imgs/project-imgs";
 
 const sources = [
-  "assets/imgs/artworks",
+  { dir: "assets/imgs/artworks", widths: [400, 800, 1600] },
   ...(await readdir(PROJECTS, { withFileTypes: true }))
     .filter((entry) => entry.isDirectory() && entry.name !== "thumbs")
-    .map((entry) => `${PROJECTS}/${entry.name}`),
+    .map((entry) => ({ dir: `${PROJECTS}/${entry.name}`, widths: [800] })),
 ];
 
-for (const src of sources) {
-  const out = `${src}/thumbs`;
+for (const { dir, widths } of sources) {
+  const out = `${dir}/thumbs`;
   await mkdir(out, { recursive: true });
 
-  const files = await readdir(src);
+  const files = await readdir(dir);
   const images = files.filter((name) => name.endsWith(".webp"));
 
   for (const file of images) {
-    const { width: sourceWidth } = await sharp(`${src}/${file}`).metadata();
+    const { width: sourceWidth } = await sharp(`${dir}/${file}`).metadata();
 
-    for (const width of WIDTHS) {
+    for (const width of widths) {
       // never upscale, the copy would be heavier than the original for nothing
       if (width >= sourceWidth) continue;
 
@@ -34,7 +33,7 @@ for (const src of sources) {
         // file doesn't exist, so make it
       }
 
-      await sharp(`${src}/${file}`, { animated: true })
+      await sharp(`${dir}/${file}`, { animated: true })
         .resize({ width })
         .webp({ quality: 85 })
         .toFile(target);
