@@ -310,6 +310,24 @@ p b {
   margin: 0.5em 0 0.15em;
 }
 
+.not-found-page .intro-text {
+  --banner-h: max(100vh, 56.25vw);
+  --bar: calc(var(--banner-h) * 0.48);
+  --title-size: min(calc(var(--bar) / 5), 12vw);
+  padding-top: 0;
+  padding-bottom: 0;
+  transform: translateY(calc(var(--banner-h) * 0.045));
+}
+
+.not-found-page .intro-text h1 {
+  font-size: var(--title-size);
+  margin: 0 0 0.25em;
+}
+
+.not-found-page .intro-text p {
+  font-size: max(1.25rem, calc(var(--title-size) / 4));
+}
+
 .intro-text p {
   font-size: clamp(1.5rem, 4vw, 2rem);
   padding-right: 40%;
