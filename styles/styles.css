@@ -58,6 +58,7 @@ body {
   margin: 0 auto 3rem;
 }
 
+.section-intro h1,
 .section-intro h2 {
   font-size: clamp(1.5rem, 3vw, 4rem);
 }
@@ -123,6 +124,10 @@ p b {
   .nav-link:hover {
     color: var(--green);
   }
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--green);
 }
 
 .resume-link {
@@ -597,6 +602,12 @@ section {
   .tag {
     white-space: normal;
   }
+}
+
+/* ARTWORKS */
+
+.artworks-page main {
+  padding-top: var(--header-offset);
 }
 
 .gallery {

@@ -2,9 +2,9 @@ import sharp from "sharp";
 import { readFile, writeFile } from "node:fs/promises";
 
 const DATA = "data/artworks.json";
-const PAGE = "index.html";
+const PAGE = "artworks/index.html";
 const SRC = "assets/imgs/artworks";
-const THUMBS = "assets/imgs/artworks/thumbs";
+const THUMBS = "../assets/imgs/artworks/thumbs";
 
 const artworks = JSON.parse(await readFile(DATA, "utf8"));
 
